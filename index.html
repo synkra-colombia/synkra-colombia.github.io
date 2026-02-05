@@ -170,10 +170,20 @@
         .submit-btn:hover {
             background-color: #128c7e;
         }
+        .submit-btn:disabled {
+            background-color: #6c757d;
+            cursor: not-allowed;
+        }
         .form-note {
             font-size: 0.9rem;
             color: #adb5bd;
             margin-top: 15px;
+        }
+        .loading-message {
+            color: #25d366;
+            font-weight: bold;
+            display: none;
+            margin-top: 10px;
         }
 
         /* BOTONES DE REDES SOCIALES */
@@ -443,8 +453,8 @@
     <section class="hero">
         <h2>¿Cansado de perder clientes por falta de respuesta o estrategia digital?</h2>
         <p>Automatiza tus chats, gestiona tus perfiles y convierte más leads – cada cliente cuenta.</p>
-        <a href="https://wa.me/573008836354?text=Hola%20Synkra,%20quiero%20agendar
-%20mi%20consulta%20gratuita" class="btn btn-whatsapp" target="_blank">Agenda tu consulta</a>
+        <a href="https://wa.me/573008836354?text=Hola%20Synkra
+%20quiero%20agendar%20mi%20consulta%20gratuita" class="btn btn-whatsapp" target="_blank">Agenda tu consulta</a>
             <a href="#planes" class="btn btn-blue">Conoce nuestros planes</a>
         </section>
 
@@ -569,7 +579,13 @@
     <section class="contact-form-section" id="contact-form">
         <h3>DEJANOS TU CONTACTO</h3>
         <p>Si prefieres que nosotros te llamemos o escribamos, completa tus datos aquí:</p>
-        <form class="contact-form" action="https://formsubmit.co/synkra2026@gmail.com" method="POST">
+        <form class="contact-form" action="https://formsubmit.co/synkra2026@gmail.com" method="POST" onsubmit="showLoading()">
+            <!-- Configuración para que lleguen bien los datos al correo -->
+            <input type="hidden" name="_subject" value="🚀 NUEVO CLIENTE POTENCIAL - Synkra Colombia">
+            <input type="hidden" name="_next" value="https://synkra-colombia.github.io">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="table"> <!-- Datos en tabla para mayor orden -->
+
             <div class="form-group">
                 <label for="name">Nombre completo</label>
                 <input type="text" id="name" name="name" required placeholder="Ej: Juan Pérez">
@@ -582,7 +598,8 @@
                 <label for="email">Correo electrónico (opcional)</label>
                 <input type="email" id="email" name="email" placeholder="Ej: tuemail@dominio.com">
             </div>
-            <button type="submit" class="submit-btn">Enviar mis datos</button>
+            <button type="submit" class="submit-btn" id="submitBtn">Enviar mis datos</button>
+            <div class="loading-message" id="loadingMsg">Enviando tus datos... ¡Muy pronto te contactamos!</div>
         </form>
         <p class="form-note">*Tus datos serán usados solo para contactarte y ofrecerte nuestros servicios.</p>
     </section>
@@ -632,5 +649,14 @@
         <p>© 2026 Synkra - Todos los derechos reservados<br>Servicios digitales para hacer crecer tu negocio</p>
     </footer>
 
+    <!-- SCRIPT PARA MENSAJE DE CARGA -->
+    <script>
+        function showLoading() {
+            document.getElementById('submitBtn').disabled = true;
+            document.getElementById('loadingMsg').style.display = 'block';
+        }
+    </script>
+
 </body>
-</html>
+    </html>
+    
