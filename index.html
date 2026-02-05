@@ -22,6 +22,8 @@
             --color-gris-claro: #f8f9fa;
             --color-gris-oscuro: #555;
             --color-menu: #f97316;
+            --color-borde-plan: #3498db; /* Color del borde de los planes */
+            --ancho-borde-plan: 2px; /* Ancho del borde igual al destacado */
         }
 
         /* ENCABEZADO ESTILO ADSMURAI */
@@ -196,6 +198,7 @@
             border-radius: 8px;
             box-shadow: 0 3px 6px rgba(0,0,0,0.1);
             transition: transform 0.3s ease;
+            border: var(--ancho-borde-plan) solid var(--color-borde-plan); /* BORDE PARA TODOS LOS PLANES */
         }
 
         .plan-card:hover {
@@ -203,8 +206,8 @@
         }
 
         .plan-card.destacado {
-            border: 2px solid var(--color-acento);
-            transform: scale(1.02);
+            transform: scale(1.02); /* Solo escala para destacar, el borde ya es igual */
+            box-shadow: 0 5px 10px rgba(0,0,0,0.15); /* Sombra más marcada para destacar */
         }
 
         .plan-card h3 {
@@ -322,7 +325,7 @@
             width: 100%;
             padding: 0.8rem;
             border: 1px solid #ddd;
-            border-radius: 4px;
+            border-radius: 8px;
             font-size: 1rem;
         }
 
@@ -331,7 +334,7 @@
             color: var(--color-blanco);
             padding: 1rem 2rem;
             border: none;
-            border-radius: 4px;
+            border-radius: 8px;
             font-size: 1rem;
             cursor: pointer;
             transition: background-color 0.3s ease;
@@ -372,6 +375,7 @@
             padding: 1.5rem;
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border: 1px solid var(--color-borde-plan); /* Borde también en preguntas si quieres uniformidad */
         }
 
         .pregunta h3 {
@@ -424,6 +428,7 @@
             text-decoration: none;
             border-radius: 4px;
             transition: background-color 0.3s ease;
+            border: 1px solid var(--color-borde-plan);
         }
 
         .btn-red:hover {
@@ -499,7 +504,8 @@
                 <h3>GESTIÓN DE REDES SOCIALES</h3>
                 <ul>
                     <li>Contenido visual/escrito adaptado a plataformas (Instagram, Facebook, TikTok, LinkedIn)</li>
-                    <li>Programación automática y gestión de interacciones | Diseño de piezas exclusivas</li>
+
+                                        <li>Programación automática y gestión de interacciones | Diseño de piezas exclusivas</li>
                     <li>Apoyo IA: Sugerencias de contenido y análisis de rendimiento</li>
                     <li>Apoyo HUMANO: Estrategia personalizada y atención a detalles</li>
                 </ul>
@@ -508,7 +514,7 @@
                 <h3>AUTOMATIZACIÓN DE CHATS</h3>
                 <ul>
                     <li>Flujos de conversación inteligentes | Respuestas instantáneas y captura de leads</li>
-                                        <li>Agendamiento automático de citas/pedidos</li>
+                    <li>Agendamiento automático de citas/pedidos</li>
                     <li>Apoyo IA: Configuración personalizada y detección de necesidades</li>
                     <li>Apoyo HUMANO: Monitoreo y atención a casos complejos</li>
                 </ul>
