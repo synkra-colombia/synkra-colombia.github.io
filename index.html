@@ -1,4 +1,4 @@
-   <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -17,23 +17,25 @@
             line-height: 1.6;
         }
 
-        /* ENCABEZADO */
+        /* ENCABEZADO SOLO CON LOGO NEGRO SIN FONDO */
         .header {
             background-color: #112240;
             padding: 20px;
             text-align: center;
             border-bottom: 2px solid #25d366;
         }
-        .header h1 {
-            color: white;
-            font-size: 2.5rem;
-            margin-bottom: 10px;
+        .synkra-logo {
+            width: 220px; /* Tamaño ajustado para verse bien */
+            height: auto;
+            display: block;
+            margin: 0 auto;
         }
         .tagline {
             font-size: 1.2rem;
             color: #25d366;
             font-weight: 500;
-            margin-top: 10px;
+            margin-top: 15px;
+            text-align: center;
         }
 
         /* SECCIÓN PRINCIPAL */
@@ -348,9 +350,9 @@
     </style>
 </head>
 <body>
-    <!-- ENCABEZADO SIN LOGO -->
+    <!-- ENCABEZADO SOLO CON EL LOGO NEGRO SIN FONDO -->
     <header class="header">
-        <h1>Synkra</h1>
+        <img src="https://i.imgur.com/2Z7XpQb.png" alt="Logo Synkra" class="synkra-logo">
         <div class="tagline">Sincroniza. Automatiza. Vende.</div>
     </header>
 
@@ -425,114 +427,5 @@
                 <li>10 publicaciones al mes</li>
                 <li>Chat automatizado básico</li>
                 <li>Reporte mensual</li>
-                <li>Atención de lunes a viernes 8:00 AM - 8:00 PM</li>
-            </ul>
-            <a href="https://wa.me/573008836354?text=Hola%20Synkra,%20quiero%20solicitar%20el%20link%20de%2
-           0%20pago%20del%20Plan%20Emprendedor" class="btn btn-yellow" target="_blank">Solicitar link de pago</a>
-            <a href="https://wa.me/573008836354?text=Hola%20Synkra,%20quiero%20más%20información%20del%20Plan%20Emprendedor" class="btn btn-whatsapp" target="_blank">Más info</a>
-            <div class="payment-note">Pagos por PSE o transferencia bancaria</div>
-        </div>
-        <div class="plan-card">
-            <h4>PLAN BÁSICO</h4>
-            <div class="price">$300.000/mes</div>
-            <ul>
-                <li>Gestión de 2 redes sociales</li>
-                <li>20 publicaciones al mes</li>
-                <li>Chat automatizado completo</li>
-                <li>Reporte semanal + mensual</li>
-                <li>Análisis de competidores</li>
-                <li>Atención de lunes a viernes 8:00 AM - 8:00 PM | Sábados 9:00 AM - 1:00 PM</li>
-            </ul>
-            <a href="https://wa.me/573008836354?text=Hola%20Synkra,%20quiero%20solicitar%20el%20link%20de%20pago%20del%20Plan%20Básico" class="btn btn-yellow" target="_blank">Solicitar link de pago</a>
-            <a href="https://wa.me/573008836354?text=Hola%20Synkra,%20quiero%20más%20información%20del%20Plan%20Básico" class="btn btn-whatsapp" target="_blank">Más info</a>
-            <div class="payment-note">Pagos por PSE o transferencia bancaria</div>
-        </div>
-        <div class="plan-card">
-            <h4>PLAN ESTÁNDAR PREMIUM</h4>
-            <div class="price">$500.000/mes</div>
-            <ul>
-                <li>Gestión de 3 redes sociales</li>
-                <li>30 publicaciones al mes</li>
-                <li>Chat + atención humana</li>
-                <li>Reportes detallados</li>
-                <li>Campañas de publicidad básicas</li>
-                <li>Diseño de contenido exclusivo</li>
-                <li>ATENCIÓN PERSONALIZADA 24/7</li>
-            </ul>
-            <a href="https://wa.me/573008836354?text=Hola%20Synkra,%20quiero%20solicitar%20el%20link%20de%20pago%20del%20Plan%20Estándar%20Premium" class="btn btn-yellow" target="_blank">Solicitar link de pago</a>
-            <a href="https://wa.me/573008836354?text=Hola%20Synkra,%20quiero%20más%20información%20del%20Plan%20Estándar%20Premium" class="btn btn-whatsapp" target="_blank">Más info</a>
-            <div class="payment-note">Pagos por PSE o transferencia bancaria</div>
-        </div>
-        <div class="plan-card">
-            <h4>PLAN PREMIUM EXCLUSIVO</h4>
-            <div class="price">$800.000/mes</div>
-            <ul>
-                <li>Gestión de 4+ redes sociales</li>
-                <li>Contenido ilimitado</li>
-                <li>Campañas de publicidad avanzadas</li>
-                <li>Optimización de sitio web</li>
-                <li>Asesoría estratégica mensual</li>
-                <li>ATENCIÓN PERSONALIZADA 24/7</li>
-            </ul>
-            <a href="https://wa.me/573008836354?text=Hola%20Synkra,%20quiero%20solicitar%20el%20link%20de%20pago%20del%20Plan%20Premium%20Exclusivo" class="btn btn-yellow" target="_blank">Solicitar link de pago</a>
-            <a href="https://wa.me/573008836354?text=Hola%20Synkra,%20quiero%20más%20información%20del%20Plan%20Premium%20Exclusivo" class="btn btn-whatsapp" target="_blank">Más info</a>
-            <div class="payment-note">Pagos por PSE o transferencia bancaria</div>
-        </div>
-    </section>
-
-    <!-- SECCIÓN PREGUNTAS FRECUENTES -->
-    <section class="faq">
-        <h3>PREGUNTAS FRECUENTES</h3>
-        <div class="faq-item">
-            <h4>¿Cuánto tiempo tarda en empezar a ver resultados?</h4>
-            <p>Dependiendo del plan y del estado actual de tu negocio, generalmente se empiezan a ver mejoras en los primeros 30 días.</p>
-        </div>
-        <div class="faq-item">
-            <h4>¿Puedo cambiar de plan en cualquier momento?</h4>
-            <p>Sí, puedes cambiar de plan o cancelarlo en cualquier momento sin costo adicional.</p>
-        </div>
-        <div class="faq-item">
-            <h4>¿Incluyen el registro de dominios o hosting?</h4>
-            <p>No, pero podemos asesorarte y ayudarte a contratar estos servicios con proveedores confiables.</p>
-        </div>
-        <div class="faq-item">
-            <h4>¿Ofrecen garantías de resultados?</h4>
-            <p>Sí – trabajamos con metas claras y si no se cumplen, te ofrecemos un mes adicional de servicio sin costo.</p>
-        </div>
-    </section>
-
-    <!-- SECCIÓN CONTACTO -->
-    <section class="contact">
-        <h3>CONTACTO</h3>
-        <p>📱 <a href="https://wa.me/573008836354" target="_blank">WhatsApp: +57 300 883 6354</a></p>
-        <p>📧 <a href="mailto:synkra2026@gmail.com" target="_blank">Email: synkra2026@gmail.com</a></p>
-        <p>📍 Ubicación: Medellín, Antioquia - Colombia</p>
-        <p class="hours-note">🕒 Horario de atención general: Lunes a Viernes 8:00 AM - 8:00 PM | Sábados 9:00 AM - 1:00 PM<br>Para planes premium (Estándar Premium y Premium Exclusivo): Atención 24/7</p>
-        
-        <div class="social-section">
-            <p>SÍGUENOS EN REDES</p>
-            <a href="https://instagram.com/Synkracol" class="social-btn social-instagram" target="_blank">
-                <span class="social-icon">📷</span> Instagram @Synkracol
-            </a>
-            <a href="https://facebook.com/Synkracol" class="social-btn social-facebook" target="_blank">
-                <span class="social-icon">📘</span> Facebook Synkracol
-            </a>
-        </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer class="footer">
-        <div class="social-links">
-            <a href="https://instagram.com/Synkracol" class="social-btn social-instagram" target="_blank" style="padding: 5px 15px; font-size: 0.9rem;">
-                <span class="social-icon">📷</span> @Synkracol
-            </a>
-            <a href="https://facebook.com/Synkracol" class="social-btn social-facebook" target="_blank" style="padding: 5px 15px; font-size: 0.9rem;">
-                <span class="social-icon">📘</span> Synkracol
-            </a>
-        </div>
-        <p>© 2026 Synkra - Todos los derechos reservados<br>Servicios digitales para hacer crecer tu negocio</p>
-    </footer>
-
-</body>
- </html>
- 
+                <li
+                   
