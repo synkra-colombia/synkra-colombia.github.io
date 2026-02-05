@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Synkra - Servicios Digitales en Colombia</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        header {
+            background-color: #1a1a2e;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .logo {
+            max-width: 300px;
+            height: auto;
+            margin-bottom: 10px;
+        }
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.8;
+            margin-top: 10px;
+        }
+        .hero {
+            padding: 50px 20px;
+            text-align: center;
+            background: linear-gradient(rgba(26, 26, 46, 0.8), rgba(26, 26, 46, 0.8)), url('https://images.unsplash.com/photo-1534796636912-3b95b3ab5986?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80');
+            background-size: cover;
+            color: white;
+        }
+        .hero h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+        .hero p {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .btn {
+            padding: 12px 25px;
+            background-color: #00b4d8;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        .btn:hover {
+            background-color: #0077b6;
+        }
+        .section {
+            padding: 40px 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .section h3 {
+            font-size: 1.8rem;
+            color: #1a1a2e;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .section h4 {
+            font-size: 1.4rem;
+            color: #1a1a2e;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+        .benefits, .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+        .card {
+            background-color: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .card i {
+            font-size: 2rem;
+            color: #00b4d8;
+            margin-bottom: 15px;
+        }
+        .pricing {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+        .price-card {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .price-card h5 {
+            font-size: 1.5rem;
+            color: #1a1a2e;
+            margin-bottom: 10px;
+        }
+        .price-card .price {
+            font-size: 2rem;
+            color: #00b4d8;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .price-card ul {
+            list-style: none;
+            text-align: left;
+            margin-bottom: 25px;
+        }
+        .price-card li {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+        .price-card li::before {
+            content: "✅";
+            margin-right: 10px;
+        }
+        .faq {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .faq-item {
+            background-color: white;
+            padding: 20px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .faq-item h5 {
+            font-size: 1.1rem;
+            color: #1a1a2e;
+            margin-bottom: 10px;
+        }
+        footer {
+            background-color: #1a1a2e;
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+            margin-top: 40px;
+        }
+        footer p {
+            margin-bottom: 15px;
+            font-size: 1rem;
+        }
+        footer a {
+            color: #00b4d8;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        /* ESTILOS ESPECIALES PARA EL FORMULARIO */
+        .form-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin-top: 20px;
+        }
+        .form-container iframe {
+            width: 100%;
+            height: 600px;
+            border: none;
+            border-radius: 5px;
+        }
+        /* AJUSTES PARA MÓVILES */
+        @media (max-width: 600px) {
+            .logo {
+                max-width: 220px;
+            }
+            .hero h2 {
+                font-size: 1.6rem;
+            }
+            .form-container iframe {
+                height: 700px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="https://i.imgur.com/9X7Z8Yp.png" alt="Logo Synkra" class="logo">
+        <p>Sincroniza. Automatiza. Vende.</p>
+    </header>
+
+    <section class="hero">
+        <h2>¿Cansado de perder clientes por falta de respuesta o estrategia digital?</h2>
+        <p>Automatiza tus chats, gestiona tus perfiles y convierte más leads – cada cliente cuenta.</p>
+        <div class="buttons">
+            <a href="#planes" class="btn">Conoce nuestros planes</a>
+            <a href="#contacto" class="btn">Agenda tu consulta</a>
+        </div>
+    </section>
+
+    <section class="section" id="porque">
+        <h3>¿POR QUÉ ELEGIR SYNKRA?</h3>
+        <p style="text-align: center; margin-bottom: 20px;">Tu socio digital para hacer crecer tu negocio</p>
+        <div class="benefits">
+            <div class="card">
+                <i>⏰</i>
+                <h4>Respuestas 24/7</h4>
+                <p>No pierdas ni un solo cliente, incluso cuando tu equipo no esté disponible.</p>
+            </div>
+            <div class="card">
+                <i>🎨</i>
+                <h4>Estrategia personalizada</h4>
+                <p>Soluciones adaptadas a tu sector, tamaño de negocio y objetivos específicos.</p>
+            </div>
+            <div class="card">
+                <i>📈</i>
+                <h4>Resultados tangibles</h4>
+                <p>Aumenta tus ventas y mejora la experiencia de tus clientes con datos claros.</p>
+            </div>
+            <div class="card">
+                <i>🌎</i>
+                <h4>Operamos en todo Colombia</h4>
+                <p>Servicios 100% digitales para llegar a donde tú estés.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="servicios">
+        <h3>SERVICIOS</h3>
+        <p style="text-align: center; margin-bottom: 20px;">Lo que hacemos por ti</p>
+        <div class="services">
+            <div class="card">
+                <i>📲</i>
+                <h4>AUTOMATIZACIÓN DE CHATS</h4>
+                <ul style="list-style: none; padding-left: 0;">
+                    <li>• Respuestas instantáneas a preguntas frecuentes</li>
+                    <li>• Ruteo de consultas a tu equipo</li>
+                    <li>• Seguimiento automático de leads</li>
+                    <li>• Integración con WhatsApp, Instagram y más</li>
+                </ul>
+            </div>
+            <div class="card">
+                <i>📱</i>
+                <h4>GESTIÓN DE PERFILES DIGITALES</h4>
+                <ul style="list-style: none; padding-left: 0;">
+                    <li>• Creación de contenido estratégico</li>
+                    <li>• Diseño visual coherente</li>
+                    <li>• Interacción constante con seguidores</li>
+                    <li>• Análisis de métricas para optimizar</li>
+                </ul>
+            </div>
+            <div class="card">
+                <i>📊</i>
+                <h4>PANEL PROFESIONAL EMPRESARIAL</h4>
+                <ul style="list-style: none; padding-left: 0;">
+                    <li>• Reportes en tiempo real</li>
+                    <li>• Gestión centralizada de canales</li>
+                    <li>• Capacitación para tu equipo</li>
+                    <li>• Integración con tiendas online o CRM</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="planes">
+        <h3>PLANES Y PRECIOS</h3>
+        <p style="text-align: center; margin-bottom: 20px;">Elige el plan que se adapta a tu negocio</p>
+        <div class="pricing">
+            <div class="price-card">
+                <h5>PLAN EMPRENDEDOR</h5>
+                <p class="price">$120.000 COP / mes</p>
+                <p style="font-style: italic; margin-bottom: 15px;">⭐ PARA NEGOCIOS PEQUEÑOS</p>
+                <ul>
+                    <li>Automatización en 1 plataforma</li>
+                    <li>Gestión de 1 red social (3 publ./semana)</li>
+                    <li>Respuestas básicas a preguntas frecuentes</li>
+                    <li>Reporte mensual simple</li>
+                </ul>
+                <a href="#contacto" class="btn">Solicitar plan</a>
+            </div>
+            <div class="price-card">
+                <h5>PLAN BÁSICO</h5>
+                <p class="price">$220.000 COP / mes</p>
+                <p style="font-style: italic; margin-bottom: 15px;">⭐ PARA NEGOCIOS EN CRECIMIENTO</p>
+                <ul>
+                    <li>Automatización en 2 plataformas</li>
+                    <li>Gestión de 2 redes sociales (5 publ./semana)</li>
+                    <li>Seguimiento de leads</li>
+                    <li>Reportes mensuales detallados</li>
+                </ul>
+                <a href="#contacto" class="btn">Solicitar plan</a>
+            </div>
+            <div class="price-card">
+                <h5>PLAN ESTÁNDAR</h5>
+                <p class="price">$400.000 COP / mes</p>
+                <p style="font-style: italic; margin-bottom: 15px;">⭐ PARA EMPRESAS CONSOLIDADAS</p>
+                <ul>
+                    <li>Automatización en 3 plataformas</li>
+                    <li>Gestión de 3 redes sociales (7 publ./semana)</li>
+                    <li>Panel de control limitado</li>
+                    <li>Asesoría mensual de 30 minutos</li>
+                </ul>
+                <a href="#contacto" class="btn">Solicitar plan</a>
+            </div>
+            <div class="price-card">
+                <h5>PLAN PREMIUM</h5>
+                <p class="price">$750.000 COP / mes</p>
+                <p style="font-style: italic; margin-bottom: 15px;">⭐ PARA EMPRESAS DE ALTO RENDIMIENTO</p>
+                <ul>
+                    <li>Automatización en 5 plataformas</li>
+                    <li>Gestión completa de redes sociales</li>
+                    <li>Panel de control profesional completo</li>
+                    <li>Asesoría semanal de 1 hora</li>
+                    <li>Diseño de material gráfico básico</li>
+                </ul>
+                <a href="#contacto" class="btn">Solicitar plan</a>
+            </div>
+            <div class="price-card" style="grid-column: 1 / -1; border: 2px solid #00b4d8;">
+                <h5>PAQUETE PERSONALIZADO</h5>
+                <p class="price">DESDE $1.200.000 COP / mes</p>
+                <p style="font-style: italic; margin-bottom: 15px;">⭐ SOLUCIONES A MEDIDA</p>
+                <ul>
+                    <li>Automatización ilimitada de plataformas</li>
+                    <li>Gestión completa de marketing digital</li>
+                    <li>Asesoría personalizada exclusiva</li>
+                    <li>Diseño de material gráfico premium</li>
+                    <li>Capacitación ilimitada para tu equipo</li>
+                </ul>
+                <a href="#contacto" class="btn">Solicitar
