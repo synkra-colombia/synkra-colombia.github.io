@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+   <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -15,7 +15,9 @@
         :root {
             --color-principal: #2c3e50;
             --color-acento: #3498db;
+            --color-acento-hover: #2980b9;
             --color-exito: #2ecc71;
+            --color-exito-hover: #27ae60;
             --color-blanco: #fff;
             --color-gris-claro: #f8f9fa;
             --color-gris-oscuro: #555;
@@ -59,7 +61,7 @@
         }
 
         .btn-whatsapp:hover {
-            background-color: #27ae60;
+            background-color: var(--color-exito-hover);
         }
 
         .btn-planes {
@@ -252,6 +254,14 @@
             margin-bottom: 2rem;
         }
 
+        .plan-card li {
+            font-size: 1rem;
+            color: var(--color-gris-oscuro);
+            margin: 0.8rem 0;
+            display: flex;
+            align-items: center;
+        }
+
         .plan-card li::before {
             content: "✔";
             color: var(--color-exito);
@@ -272,8 +282,9 @@
             justify-content: center;
         }
 
+        /* Botón Obtener Plan - VERDE */
         .btn-plan {
-            background-color: var(--color-acento);
+            background-color: var(--color-exito);
             color: var(--color-blanco);
             padding: 0.8rem 1.2rem;
             text-decoration: none;
@@ -283,13 +294,13 @@
         }
 
         .btn-plan:hover {
-            background-color: #2980b9;
+            background-color: var(--color-exito-hover);
         }
 
+        /* Botón Más Info - AZUL */
         .btn-masinfo {
-            background-color: transparent;
-            color: var(--color-acento);
-            border: 1px solid var(--color-acento);
+            background-color: var(--color-acento);
+            color: var(--color-blanco);
             padding: 0.8rem 1.2rem;
             text-decoration: none;
             border-radius: 4px;
@@ -298,8 +309,7 @@
         }
 
         .btn-masinfo:hover {
-            background-color: var(--color-acento);
-            color: var(--color-blanco);
+            background-color: var(--color-acento-hover);
         }
 
         /* Sección Dejanos Tu Contacto */
@@ -356,7 +366,7 @@
         }
 
         .btn-enviar:hover {
-            background-color: #2980b9;
+            background-color: var(--color-acento-hover);
         }
 
         .formulario-nota {
@@ -514,11 +524,9 @@
             <div class="servicio-card">
                 <h3>GESTIÓN DE REDES SOCIALES</h3>
                 <ul>
-                    <li>Contenido visual/escrito adaptado a plataformas (Instagram, Facebook, TikTok, LinkedIn)</li>
-                    <li>Programación automática y gestión de interacciones | Diseño de piezas exclusivas</li>
-                    <li>Apoyo IA: Sugerencias de contenido y análisis de rendimiento</li>
+                    <li
+                                            <li>Apoyo IA: Sugerencias de contenido y análisis de rendimiento</li>
                     <li>Apoyo HUMANO: Estrategia personalizada y atención a detalles</li>
-                                    </li>
                 </ul>
             </div>
             <div class="servicio-card">
@@ -566,9 +574,9 @@
                     <li>Atención L-V 8:00 AM - 8:00 PM</li>
                 </ul>
                 <div class="plan-botones">
-                    <a href="https://wa.me/573008836354"
-                        target="_blank" class="btn-plan" style="background-color: #10b981; hover: #059669;">Obtener Plan Emprendedor</a
-               </div>
+                    <a href="https://wa.me/573008836354" target="_blank" class="btn-plan">Obtener Plan Emprendedor</a>
+                    <a href="#contacto" class="btn-masinfo">Más info</a>
+                </div>
             </div>
             <div class="plan-card">
                 <h3>PLAN BÁSICO</h3>
