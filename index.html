@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Encabezado Proyecto</title>
+    <title>Synkra - Sincroniza. Automatiza. Vende.</title>
     <style>
         * {
             margin: 0;
@@ -12,14 +12,27 @@
             font-family: 'Arial', sans-serif;
         }
 
+        :root {
+            --color-principal: #2c3e50;
+            --color-acento: #3498db;
+            --color-exito: #2ecc71;
+            --color-blanco: #fff;
+            --color-gris-claro: #f8f9fa;
+            --color-gris-oscuro: #555;
+        }
+
+        /* Encabezado */
         header {
-            background-color: #2c3e50;
-            color: white;
+            background-color: var(--color-principal);
+            color: var(--color-blanco);
             padding: 1rem 5%;
             display: flex;
             justify-content: space-between;
             align-items: center;
             box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            position: sticky;
+            top: 0;
+            z-index: 100;
         }
 
         .logo h1 {
@@ -27,21 +40,37 @@
             font-weight: 700;
         }
 
-        nav ul {
-            list-style: none;
+        .header-botones {
             display: flex;
-            gap: 1.5rem;
+            gap: 1rem;
         }
 
-        nav a {
-            color: white;
+        .btn {
+            padding: 0.8rem 1.5rem;
+            border-radius: 4px;
             text-decoration: none;
-            font-size: 1rem;
-            transition: color 0.3s ease;
+            font-weight: 500;
+            transition: background-color 0.3s ease;
         }
 
-        nav a:hover {
-            color: #3498db;
+        .btn-whatsapp {
+            background-color: var(--color-exito);
+            color: var(--color-blanco);
+        }
+
+        .btn-whatsapp:hover {
+            background-color: #27ae60;
+        }
+
+        .btn-planes {
+            background-color: transparent;
+            color: var(--color-blanco);
+            border: 1px solid var(--color-blanco);
+        }
+
+        .btn-planes:hover {
+            background-color: var(--color-blanco);
+            color: var(--color-principal);
         }
 
         @media (max-width: 768px) {
@@ -51,24 +80,614 @@
                 text-align: center;
             }
 
-            nav ul {
+            .header-botones {
                 justify-content: center;
             }
+        }
+
+        /* Sección Principal */
+        .seccion-principal {
+            background-color: var(--color-gris-claro);
+            padding: 4rem 5%;
+            text-align: center;
+        }
+
+        .seccion-principal h2 {
+            font-size: 2.5rem;
+            color: var(--color-principal);
+            margin-bottom: 0.5rem;
+        }
+
+        .seccion-principal .eslogan {
+            font-size: 1.5rem;
+            color: var(--color-acento);
+            margin-bottom: 1.5rem;
+            font-weight: 500;
+        }
+
+        .seccion-principal p {
+            font-size: 1.1rem;
+            color: var(--color-gris-oscuro);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Sección ¿Por qué Elegir Synkra? */
+        .porque-synkra {
+            padding: 4rem 5%;
+        }
+
+        .porque-synkra h2 {
+            font-size: 2rem;
+            color: var(--color-principal);
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .caracteristicas-lista {
+            max-width: 900px;
+            margin: 0 auto;
+            list-style: none;
+        }
+
+        .caracteristicas-lista li {
+            font-size: 1.1rem;
+            color: var(--color-gris-oscuro);
+            margin: 1rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .caracteristicas-lista li::before {
+            content: "✔️";
+            position: absolute;
+            left: 0;
+            color: var(--color-exito);
+        }
+
+        /* Sección Nuestros Servicios */
+        .servicios {
+            padding: 4rem 5%;
+            background-color: var(--color-gris-claro);
+        }
+
+        .servicios h2 {
+            font-size: 2rem;
+            color: var(--color-principal);
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .servicios-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .servicio-card {
+            background-color: var(--color-blanco);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+        }
+
+        .servicio-card h3 {
+            font-size: 1.3rem;
+            color: var(--color-principal);
+            margin-bottom: 1rem;
+        }
+
+        .servicio-card ul {
+            list-style: none;
+        }
+
+        .servicio-card li {
+            font-size: 1rem;
+            color: var(--color-gris-oscuro);
+            margin: 0.8rem 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .servicio-card li::before {
+            content: "✔";
+            color: var(--color-exito);
+            margin-right: 0.5rem;
+        }
+
+        /* Sección Nuestros Planes */
+        .planes {
+            padding: 4rem 5%;
+        }
+
+        .planes h2 {
+            font-size: 2rem;
+            color: var(--color-principal);
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .planes-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .plan-card {
+            background-color: var(--color-blanco);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .plan-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .plan-card.destacado {
+            border: 2px solid var(--color-acento);
+            transform: scale(1.02);
+        }
+
+        .plan-card h3 {
+            font-size: 1.5rem;
+            color: var(--color-principal);
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .plan-card .precio {
+            font-size: 1.8rem;
+            color: var(--color-acento);
+            text-align: center;
+            margin-bottom: 1.5rem;
+            font-weight: bold;
+        }
+
+        .plan-card ul {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+
+        .plan-card li::before {
+            content: "✔";
+            color: var(--color-exito);
+            margin-right: 0.5rem;
+        }
+
+        .plan-nota {
+            font-size: 0.9rem;
+            color: var(--color-gris-oscuro);
+            margin-bottom: 2rem;
+            font-style: italic;
+            text-align: center;
+        }
+
+        .plan-botones {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        .btn-plan {
+            background-color: var(--color-acento);
+            color: var(--color-blanco);
+            padding: 0.8rem 1.2rem;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-plan:hover {
+            background-color: #2980b9;
+        }
+
+        .btn-masinfo {
+            background-color: transparent;
+            color: var(--color-acento);
+            border: 1px solid var(--color-acento);
+            padding: 0.8rem 1.2rem;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-masinfo:hover {
+            background-color: var(--color-acento);
+            color: var(--color-blanco);
+        }
+
+        /* Sección Dejanos Tu Contacto */
+        .contacto-formulario {
+            padding: 4rem 5%;
+            background-color: var(--color-gris-claro);
+        }
+
+        .contacto-formulario h2 {
+            font-size: 2rem;
+            color: var(--color-principal);
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .formulario {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: var(--color-blanco);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+        }
+
+        .campo-formulario {
+            margin-bottom: 1.5rem;
+        }
+
+        .campo-formulario label {
+            display: block;
+            font-size: 1rem;
+            color: var(--color-principal);
+            margin-bottom: 0.5rem;
+        }
+
+        .campo-formulario input {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+
+        .btn-enviar {
+            background-color: var(--color-acento);
+            color: var(--color-blanco);
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 4px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            width: 100%;
+        }
+
+        .btn-enviar:hover {
+            background-color: #2980b9;
+        }
+
+        .formulario-nota {
+            font-size: 0.9rem;
+            color: var(--color-gris-oscuro);
+            text-align: center;
+            margin-top: 1rem;
+        }
+
+        /* Sección Preguntas Frecuentes */
+        .preguntas-frecuentes {
+            padding: 4rem 5%;
+        }
+
+        .preguntas-frecuentes h2 {
+            font-size: 2rem;
+            color: var(--color-principal);
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .preguntas-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .pregunta {
+            margin-bottom: 1.5rem;
+            background-color: var(--color-blanco);
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .pregunta h3 {
+            font-size: 1.1rem;
+            color: var(--color-principal);
+            margin-bottom: 0.5rem;
+        }
+
+        .pregunta p {
+            font-size: 1rem;
+            color: var(--color-gris-oscuro);
+        }
+
+        /* Sección Contacto y Redes */
+        .contacto-redes {
+            padding: 4rem 5%;
+            background-color: var(--color-gris-claro);
+            text-align: center;
+        }
+
+        .contacto-redes h2 {
+            font-size: 2rem;
+            color: var(--color-principal);
+            margin-bottom: 2rem;
+        }
+
+        .contacto-info {
+            max-width: 800px;
+            margin: 0 auto;
+            margin-bottom: 2rem;
+        }
+
+        .contacto-info p {
+            font-size: 1.1rem;
+            color: var(--color-gris-oscuro);
+            margin: 0.8rem 0;
+        }
+
+        .redes-botones {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            margin-top: 1.5rem;
+        }
+
+        .btn-red {
+            background-color: var(--color-principal);
+            color: var(--color-blanco);
+            padding: 0.8rem 1.5rem;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-red:hover {
+            background-color: #34495e;
+        }
+
+        /* Pie de Página */
+        footer {
+            background-color: var(--color-principal);
+            color: var(--color-blanco);
+            padding: 2rem 5%;
+            text-align: center;
+        }
+
+        .footer-redes {
+            margin-bottom: 1rem;
+        }
+
+        .footer-redes a {
+            color: var(--color-blanco);
+            text-decoration: none;
+            margin: 0 1rem;
+            font-size: 1rem;
+            transition: color 0.3s ease;
+        }
+
+        .footer-redes a:hover {
+            color: var(--color-acento);
+        }
+
+        .copyright {
+            font-size: 0.9rem;
+            color: #ddd;
         }
     </style>
 </head>
 <body>
+    <!-- Encabezado -->
     <header>
         <div class="logo">
-            <h1>Nombre del Proyecto</h1>
+            <h1>Synkra</h1>
         </div>
-        <nav>
-            <ul>
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#servicios">Servicios</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-            </ul>
-        </nav>
+        <div class="header-botones">
+            <a href="https://wa.me/573008836354" target="_blank" class="btn btn-whatsapp">Agenda tu consulta</a>
+            <a href="#planes" class="btn btn-planes">Conoce nuestros planes</a>
+        </div>
     </header>
+
+    <!-- Sección Principal -->
+    <section class="seccion-principal">
+        <h2>Synkra</h2>
+        <p class="eslogan">Sincroniza. Automatiza. Vende.</p>
+        <p>El futuro digital empieza cuando entiendes a tus clientes.</p>
+    </section>
+
+    <!-- Sección ¿Por qué Elegir Synkra? -->
+    <section class="porque-synkra" id="porque">
+        <h2>¿Por qué Elegir Synkra?</h2>
+        <ul class="caracteristicas-lista">
+            <li>Estrategias adaptadas + IA + HUMANO: Planes diseñados a tu negocio con apoyo inteligente y equipo humano al mando</li>
+            <li>Resultados medibles: Seguimiento de clientes y optimización de redes en tiempo real</li>
+            <li>Pago flexible: Ajusta tu inversión según tus necesidades</li>
+            <li>Atención personalizada: Conexión humana que entiende tus metas (24/7 en planes premium)</li>
+        </ul>
+    </section>
+
+    <!-- Sección Nuestros Servicios -->
+    <section class="servicios" id="servicios">
+        <h2>Nuestros Servicios</h2>
+        <div class="servicios-container">
+            <div class="servicio-card">
+                <h3>GESTIÓN DE REDES SOCIALES</h3>
+                <ul>
+                    <li>Contenido visual/escrito adaptado a plataformas (Instagram, Facebook, TikTok, LinkedIn)</li>
+                    <li>Programación automática y gestión de interacciones | Diseño de piezas exclusivas</li>
+                    <li>Apoyo IA: Sugerencias de contenido y análisis de rendimiento</li>
+                    <li>Apoyo HUMANO: Estrategia personalizada y atención a detalles</li>
+                                    </li>
+                </ul>
+            </div>
+            <div class="servicio-card">
+                <h3>AUTOMATIZACIÓN DE CHATS</h3>
+                <ul>
+                    <li>Flujos de conversación inteligentes | Respuestas instantáneas y captura de leads</li>
+                    <li>Agendamiento automático de citas/pedidos</li>
+                    <li>Apoyo IA: Configuración personalizada y detección de necesidades</li>
+                    <li>Apoyo HUMANO: Monitoreo y atención a casos complejos</li>
+                </ul>
+            </div>
+            <div class="servicio-card">
+                <h3>PUBLICIDAD DIGITAL</h3>
+                <ul>
+                    <li>Campañas en Facebook, Instagram y Google Ads | Segmentación avanzada y diseños optimizados</li>
+                    <li>Seguimiento de métricas clave</li>
+                    <li>Apoyo IA: Optimización de inversión y predicción de resultados</li>
+                    <li>Apoyo HUMANO: Creación de mensajes que conectan</li>
+                </ul>
+            </div>
+            <div class="servicio-card">
+                <h3>DISEÑO Y OPTIMIZACIÓN DE SITIOS WEB</h3>
+                <ul>
+                    <li>Diseño responsivo y navegación intuitiva | SEO básico y pasarelas de pago</li>
+                    <li>Contenido web actualizado</li>
+                    <li>Apoyo IA: Sugerencias de estructura y optimización de velocidad</li>
+                    <li>Apoyo HUMANO: Diseño centrado en la experiencia del usuario</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Nuestros Planes -->
+    <section class="planes" id="planes">
+        <h2>Nuestros Planes</h2>
+        <div class="planes-container">
+            <div class="plan-card">
+                <h3>PLAN EMPRENDEDOR</h3>
+                <div class="precio">$200.000/mes</div>
+                <ul>
+                    <li>Gestión de 1 red social</li>
+                    <li>10 publicaciones al mes</li>
+                    <li>Chat automatizado básico + apoyo humano ocasional</li>
+                    <li>Reporte mensual preparado por equipo humano</li>
+                    <li>Atención L-V 8:00 AM - 8:00 PM</li>
+                </ul>
+                <div class="plan-botones">
+                    <a href="https://wa.me/573008836354" target="_blank" class="btn-plan">Obtener Plan Emprendedor</a>
+                    <a href="#contacto" class="btn-masinfo">Más info</a>
+                </div>
+            </div>
+            <div class="plan-card">
+                <h3>PLAN BÁSICO</h3>
+                <div class="precio">$350.000/mes</div>
+                <ul>
+                    <li>Gestión de 2 redes sociales</li>
+                    <li>20 publicaciones al mes</li>
+                    <li>Chat automatizado completo + apoyo humano regular</li>
+                    <li>Reporte semanal + mensual con análisis humano</li>
+                    <li>Análisis de competidores</li>
+                    <li>Atención L-V 8:00 AM - 8:00 PM | Sáb 9:00 AM - 1:00 PM</li>
+                </ul>
+                <div class="plan-botones">
+                    <a href="https://wa.me/573008836354" target="_blank" class="btn-plan">Obtener Plan Básico</a>
+                    <a href="#contacto" class="btn-masinfo">Más info</a>
+                </div>
+            </div>
+            <div class="plan-card destacado">
+                <h3>PLAN ESTÁNDAR PREMIUM</h3>
+                <div class="precio">$700.000/mes</div>
+                <ul>
+                    <li>✅ IA: Sugerencias de contenido, Análisis de datos</li>
+                    <li>✅ Humano: Asesor asignado, atención personalizada</li>
+                    <li>Gestión de 3 redes sociales</li>
+                    <li>30 publicaciones al mes</li>
+                    <li>Chat + atención humana exclusiva | Reportes detallados</li>
+                    <li>Campañas de publicidad básicas | Diseño de contenido exclusivo</li>
+                    <li>Atención 24/7</li>
+                </ul>
+                <div class="plan-botones">
+                    <a href="https://wa.me/573008836354" target="_blank" class="btn-plan">Obtener Plan Estándar Premium</a>
+                    <a href="#contacto" class="btn-masinfo">Más info</a>
+                </div>
+            </div>
+            <div class="plan-card">
+                <h3>PLAN PREMIUM EXCLUSIVO SYNKRA</h3>
+                <div class="precio">$1.200.000/mes</div>
+                <ul>
+                    <li>✅ IA: Optimización de procesos, Análisis de datos profundo, Dirigido por Synkra</li>
+                    <li>✅ Equipo: Coordinador estratégico, diseñador, community manager y publicista</li>
+                    <li>Gestión de 4 redes sociales | Contenido + Publicidad avanzada</li>
+                    <li>Seguimiento integral + Clasificación de clientes</li>
+                    <li>Asesoría mensual presencial o virtual | Atención 24/7</li>
+                </ul>
+                <p class="plan-nota">IA como herramienta, Synkra como cerebro – personas como conexión.</p>
+                <div class="plan-botones">
+                    <a href="https://wa.me/573008836354" target="_blank" class="btn-plan">Obtener Plan</a>
+                    <a href="#contacto" class="btn-masinfo">Más info</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Dejanos Tu Contacto -->
+    <section class="contacto-formulario" id="contacto">
+        <h2>Dejanos Tu Contacto</h2>
+        <form class="formulario">
+            <div class="campo-formulario">
+                <label for="nombre">Nombre completo</label>
+                <input type="text" id="nombre" name="nombre" required>
+            </div>
+            <div class="campo-formulario">
+                <label for="telefono">Número de contacto</label>
+                <input type="tel" id="telefono" name="telefono" required>
+            </div>
+            <div class="campo-formulario">
+                <label for="correo">Correo (opcional)</label>
+                <input type="email" id="correo" name="correo">
+            </div>
+            <button type="submit" class="btn-enviar">Enviar mis datos</button>
+            <p class="formulario-nota">Tu información es manejada por nuestro equipo con total seguridad</p>
+        </form>
+    </section>
+
+    <!-- Sección Preguntas Frecuentes -->
+    <section class="preguntas-frecuentes">
+        <h2>Preguntas Frecuentes</h2>
+        <div class="preguntas-container">
+            <div class="pregunta">
+                <h3>¿Cuánto tiempo tarda en empezar a ver resultados?</h3>
+                <p>~30 días, ajustado por nuestro equipo según las características de tu negocio</p>
+            </div>
+            <div class="pregunta">
+                <h3>¿Puedo cambiar de plan en cualquier momento?</h3>
+                <p>Sí, sin costo adicional – nuestro equipo te ayudará en todo el proceso de transición</p>
+            </div>
+            <div class="pregunta">
+                <h3>¿Incluyen el registro de dominios o hosting?</h3>
+                <p>No, pero asesoramos personalmente para que elijas las opciones que mejor se adapten a tus necesidades</p>
+            </div>
+            <div class="pregunta">
+                <h3>¿Ofrecen garantías de resultados?</h3>
+                <p>Sí, si no se cumplen las metas acordadas, te regalamos un mes adicional de servicios sin costo</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Contacto y Redes -->
+    <section class="contacto-redes">
+        <h2>Contacto y Redes</h2>
+        <div class="contacto-info">
+            <p>WhatsApp: +57 300 883 6354 – Atención humana directa</p>
+            <p>Email: synkra2026@gmail.com – Respuesta en menos de 24 horas</p>
+            <p>Ubicación: Medellín, Antioquia - Colombia – Visítanos o agenda reunión virtual</p>
+            <p>Horarios: General L-V 8:00 AM - 8:00 PM | Sáb 9:00 AM - 1:00 PM; Premium 24/7</p>
+        </div>
+        <div class="redes-botones">
+            <a href="#" target="_blank" class="btn-red">Facebook</a>
+            <a href="#" target="_blank" class="btn-red">Instagram</a>
+        </div>
+    </section>
+
+    <!-- Pie de Página -->
+    <footer>
+        <div class="footer-redes">
+            <a href="#" target="_blank">Facebook</a>
+            <a href="#" target="_blank">Instagram</a>
+        </div>
+        <p class="copyright">© 2026 Synkra - Todos los derechos reservados – Conectando negocios con personas</p>
+    </footer>
 </body>
 </html>
