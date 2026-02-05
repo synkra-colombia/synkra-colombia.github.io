@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -11,14 +11,28 @@
             box-sizing: border-box;
             font-family: Arial, sans-serif;
         }
+
         body {
             background-color: #0a192f;
             color: #f8f9fa;
             line-height: 1.6;
-            padding-bottom: 100px; /* Espacio para el botón fijo */
+            padding-bottom: 100px;
         }
 
-        /* BOTÓN FIJO DE CONTACTO (VENTANA PEQUEÑA) */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .main-title {
+            text-align: center;
+            font-size: 1.8rem;
+            margin: 25px 0 35px;
+            color: #64ffda;
+        }
+
+        /* BOTÓN FIJO DE CONTACTO */
         .fixed-contact-btn {
             position: fixed;
             bottom: 20px;
@@ -29,634 +43,281 @@
             border-radius: 50px;
             font-weight: bold;
             text-decoration: none;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-            z-index: 1000;
-            transition: background-color 0.3s ease;
+            z-index: 100;
         }
+
         .fixed-contact-btn:hover {
             background-color: #128c7e;
         }
 
-        /* ENCABEZADO SOLO CON NOMBRE DE LA EMPRESA */
-        .header {
-            background-color: #112240;
-            padding: 20px;
-            text-align: center;
-            border-bottom: 2px solid #25d366;
-        }
-        .header h1 {
-            font-size: 3rem;
-            color: white;
-            margin: 0;
-        }
-        .tagline {
-            font-size: 1.2rem;
-            color: #25d366;
-            font-weight: 500;
-            margin-top: 15px;
-            text-align: center;
-        }
-
-        /* SECCIÓN PRINCIPAL */
-        .hero {
-            padding: 60px 20px;
-            text-align: center;
-            background: linear-gradient(rgba(10, 25, 47, 0.9), rgba(10, 25, 47, 0.9)), url('https://images.unsplash.com/photo-1504639725590-34d0984388bd?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80');
-            background-size: cover;
-            background-position: center;
-        }
-        .hero h2 {
-            font-size: 2rem;
-            margin-bottom: 20px;
-            max-width: 900px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        .hero p {
-            font-size: 1.1rem;
-            margin-bottom: 30px;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        .btn {
-            display: inline-block;
-            padding: 12px 25px;
-            margin: 10px;
-            border-radius: 5px;
-            font-weight: bold;
-            font-size: 1.1rem;
-            text-decoration: none;
-            transition: background-color 0.3s ease;
-        }
-        .btn-whatsapp {
-            background-color: #25d366;
-            color: white;
-        }
-        .btn-whatsapp:hover {
-            background-color: #128c7e;
-        }
-        .btn-blue {
-            background-color: #00b4d8;
-            color: #0a192f;
-        }
-        .btn-blue:hover {
-            background-color: #0077b6;
-        }
-        .btn-green {
-            background-color: #25d366;
-            color: white;
-        }
-        .btn-green:hover {
-            background-color: #128c7e;
-        }
-
-        /* FORMULARIO DE CONTACTO PRINCIPAL */
-        .contact-form-section {
-            padding: 50px 20px;
-            max-width: 800px;
-            margin: 30px auto;
-            background-color: #112240;
-            border-radius: 10px;
-            text-align: center;
-        }
-        .contact-form-section h3 {
-            font-size: 1.8rem;
-            margin-bottom: 30px;
-            color: #00b4d8;
-            border-bottom: 2px solid #00b4d8;
-            display: inline-block;
-            padding-bottom: 10px;
-        }
-        .contact-form {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-        .form-group {
-            text-align: left;
-        }
-        .form-group label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: bold;
-            color: #00b4d8;
-        }
-        .form-group input {
-            width: 100%;
-            padding: 12px;
-            border-radius: 5px;
-            border: none;
-            background-color: #0a192f;
-            color: #f8f9fa;
-            font-size: 1rem;
-        }
-        .form-group input:focus {
-            outline: 2px solid #25d366;
-        }
-        .submit-btn {
-            background-color: #25d366;
-            color: white;
-            border: none;
-            padding: 12px 25px;
-            border-radius: 5px;
-            font-weight: bold;
-            font-size: 1.1rem;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-        .submit-btn:hover {
-            background-color: #128c7e;
-        }
-        .submit-btn:disabled {
-            background-color: #6c757d;
-            cursor: not-allowed;
-        }
-        .form-note {
-            font-size: 0.9rem;
-            color: #adb5bd;
-            margin-top: 15px;
-        }
-        .loading-message {
-            color: #25d366;
-            font-weight: bold;
-            display: none;
-            margin-top: 10px;
-        }
-
-        /* BOTONES DE REDES SOCIALES */
-        .social-btn {
-            display: inline-flex;
-            align-items: center;
-            padding: 10px 20px;
-            margin: 8px;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: transform 0.3s ease;
-        }
-        .social-btn:hover {
-            transform: translateY(-3px);
-        }
-        .social-instagram {
-            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-            color: white;
-        }
-        .social-facebook {
-            background-color: #1877f2;
-            color: white;
-        }
-
-        /* SECCIÓN ¿POR QUÉ ELEGIR SYNKRA? */
-        .why-us {
-            padding: 50px 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        .why-us h3 {
-            font-size: 1.8rem;
-            text-align: center;
-            margin-bottom: 40px;
-            color: #25d366;
-            border-bottom: 2px solid #25d366;
-            display: inline-block;
-            padding-bottom: 10px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        .why-us ul {
-            list-style: none;
-            max-width: 600px;
-            margin: 0 auto;
-            text-align: left;
-        }
-        .why-us li {
-            margin: 15px 0;
-            padding-left: 25px;
-            position: relative;
-            font-size: 1.1rem;
-        }
-        .why-us li::before {
-            content: "✓";
-            color: #25d366;
-            position: absolute;
-            left: 0;
-            font-weight: bold;
-        }
-
-        /* SECCIÓN SERVICIOS */
-        .services {
-            padding: 50px 20px;
-            max-width: 1200px;
-            margin: 30px auto;
-            background-color: #112240;
-            border-radius: 10px;
-        }
-        .services h3 {
-            font-size: 1.8rem;
-            text-align: center;
-            margin-bottom: 40px;
-            color: #00b4d8;
-            border-bottom: 2px solid #00b4d8;
-            display: inline-block;
-            padding-bottom: 10px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        .service-card {
-            margin-bottom: 30px;
-            padding: 20px;
-            background-color: #0a192f;
-            border-radius: 8px;
-            border-left: 4px solid #00b4d8;
-        }
-        .service-card h4 {
-            font-size: 1.4rem;
-            margin-bottom: 15px;
-            color: #00b4d8;
-        }
-        .service-card ul {
-            list-style: none;
-            text-align: left;
-        }
-        .service-card li {
-            margin: 10px 0;
-            padding-left: 20px;
-            position: relative;
-        }
-        .service-card li::before {
-            content: "•";
-            color: #00b4d8;
-            position: absolute;
-            left: 0;
-        }
-
         /* SECCIÓN PLANES */
-        .plans {
-            padding: 50px 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        .plans h3 {
-            font-size: 1.8rem;
-            text-align: center;
+        .plans-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
             margin-bottom: 40px;
-            color: #25d366;
-            border-bottom: 2px solid #25d366;
-            display: inline-block;
-            padding-bottom: 10px;
-            margin-left: auto;
-            margin-right: auto;
         }
-        .plan-card {
+
+        .plan-box {
             background-color: #112240;
-            padding: 30px;
             border-radius: 10px;
+            padding: 18px;
             text-align: center;
-            border: 1px solid #25d366;
-            margin-bottom: 30px;
-            transition: transform 0.3s ease;
+            border: 1px solid #64ffda;
         }
-        .plan-card:hover {
-            transform: translateY(-5px);
+
+        .plan-name {
+            font-size: 1.3rem;
+            color: #64ffda;
+            margin-bottom: 12px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #64ffda;
         }
-        .plan-card h4 {
-            font-size: 1.5rem;
-            margin-bottom: 15px;
-            color: #25d366;
-        }
-        .plan-card .price {
-            font-size: 1.8rem;
+
+        .plan-price {
+            font-size: 1.7rem;
             font-weight: bold;
-            margin-bottom: 20px;
-        }
-        .plan-card ul {
-            list-style: none;
-            margin-bottom: 25px;
-            text-align: left;
-        }
-        .plan-card li {
-            margin: 10px 0;
-            padding-left: 20px;
-            position: relative;
-        }
-        .plan-card li::before {
-            content: "✓";
             color: #25d366;
-            position: absolute;
-            left: 0;
+            margin: 12px 0 15px;
         }
-        .payment-note {
-            text-align: center;
+
+        .plan-features {
+            list-style: none;
+            margin-bottom: 18px;
+        }
+
+        .plan-features li {
             font-size: 0.9rem;
-            color: #adb5bd;
-            margin-top: 15px;
+            margin-bottom: 6px;
+        }
+
+        .plan-button {
+            display: inline-block;
+            padding: 9px 18px;
+            background-color: #64ffda;
+            color: #0a192f;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+        }
+
+        .plan-button:hover {
+            background-color: #4cc9f0;
         }
 
         /* SECCIÓN PREGUNTAS FRECUENTES */
         .faq {
-            padding: 50px 20px;
-            max-width: 1000px;
-            margin: 30px auto;
-            background-color: #112240;
-            border-radius: 10px;
-        }
-        .faq h3 {
-            font-size: 1.8rem;
-            text-align: center;
             margin-bottom: 40px;
-            color: #00b4d8;
-            border-bottom: 2px solid #00b4d8;
-            display: inline-block;
-            padding-bottom: 10px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        .faq-item {
-            background-color: #0a192f;
+            background-color: #112240;
             padding: 20px;
-            border-radius: 8px;
+            border-radius: 10px;
+            border: 1px solid #64ffda;
+        }
+
+        .faq h3 {
+            font-size: 1.3rem;
+            color: #64ffda;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .faq-item {
             margin-bottom: 15px;
         }
+
         .faq-item h4 {
-            font-size: 1.2rem;
-            margin-bottom: 10px;
-            color: #00b4d8;
-        }
-        .faq-item p {
             font-size: 1rem;
-            color: #f8f9fa;
+            color: #4cc9f0;
+            margin-bottom: 5px;
+        }
+
+        .faq-item p {
+            font-size: 0.9rem;
+            padding-left: 10px;
         }
 
         /* SECCIÓN CONTACTO */
-        .contact {
-            padding: 50px 20px;
+        .contact-section {
             background-color: #112240;
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid #64ffda;
+            margin-bottom: 40px;
+        }
+
+        .contact-section h3 {
+            font-size: 1.3rem;
+            color: #64ffda;
+            margin-bottom: 15px;
             text-align: center;
-            border-top: 2px solid #25d366;
         }
-        .contact h3 {
-            font-size: 1.8rem;
-            margin-bottom: 20px;
+
+        .contact-section p {
+            text-align: center;
+            margin-bottom: 8px;
         }
-        .contact p {
-            font-size: 1.1rem;
-            margin: 15px 0;
-        }
-        .contact a {
+
+        .contact-section a {
             color: #25d366;
             text-decoration: none;
         }
-        .contact .social-section {
-            margin: 25px 0;
-            padding-top: 15px;
-            border-top: 1px solid #25d366;
-        }
-        .contact .social-section p {
-            font-size: 1.2rem;
-            color: #00b4d8;
-            margin-bottom: 15px;
-        }
-        .contact .hours-note {
-            font-size: 0.9rem;
+
+        .hours-note {
+            font-size: 0.85rem;
             color: #adb5bd;
+            margin-top: 10px;
+        }
+
+        /* SECCIÓN REDES SOCIALES */
+        .social-section {
+            text-align: center;
             margin-top: 15px;
+        }
+
+        .social-section p {
+            color: #64ffda;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .social-btn {
+            display: inline-block;
+            margin: 0 8px;
+            color: #64ffda;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .social-btn:hover {
+            color: #4cc9f0;
         }
 
         /* FOOTER */
         .footer {
-            background-color: #0a192f;
-            padding: 25px 20px;
             text-align: center;
-            font-size: 0.9rem;
-            color: #adb5bd;
-            border-top: 1px solid #112240;
+            padding: 20px 0;
+            border-top: 1px solid #64ffda;
+            font-size: 0.85rem;
         }
+
         .footer .social-links {
-            margin-bottom: 15px;
+            margin-bottom: 10px;
+        }
+
+        /* MENSAJE DE CARGA */
+        #loadingMsg {
+            display: none;
+            color: #25d366;
+            text-align: center;
+            margin-top: 10px;
         }
     </style>
 </head>
 <body>
-    <!-- BOTÓN FIJO PEQUEÑO DE CONTACTO -->
-    <a href="#contact-form" class="fixed-contact-btn">Dejanos tu contacto</a>
+    <a href="https://wa.me/573008836354" class="fixed-contact-btn" target="_blank" rel="noopener noreferrer">
+        WhatsApp
+    </a>
 
-    <!-- ENCABEZADO SOLO CON NOMBRE DE LA EMPRESA -->
-    <header class="header">
-        <h1>Synkra</h1>
-        <div class="tagline">Sincroniza. Automatiza. Vende.</div>
-    </header>
+    <div class="container">
+        <h1 class="main-title">Nuestros Servicios y Planes</h1>
 
-    <!-- SECCIÓN PRINCIPAL -->
-    <section class="hero">
-        <h2>¿Cansado de perder clientes por falta de respuesta o estrategia digital?</h2>
-        <p>Automatiza tus chats, gestiona tus perfiles y convierte más leads – cada cliente cuenta.</p>
-        <a href="https://wa.me/573008836354?text=Hola%20Synkra
-%20quiero%20agendar%20mi%20consulta%20gratuita" class="btn btn-whatsapp" target="_blank">Agenda tu consulta</a>
-            <a href="#planes" class="btn btn-blue">Conoce nuestros planes</a>
+        <!-- SECCIÓN PLANES -->
+        <section class="plans-container">
+            <div class="plan-box">
+                <h2 class="plan-name">Plan Básico</h2>
+                <p class="plan-price">$19.99/mes</p>
+                <ul class="plan-features">
+                    <li>Acceso a funciones esenciales</li>
+                    <li>Soporte por correo electrónico</li>
+                    <li>1 usuario autorizado</li>
+                    <li>5GB de almacenamiento en la nube</li>
+                </ul>
+                <a href="#" class="plan-button">Contratar Ahora</a>
+            </div>
+
+            <div class="plan-box">
+                <h2 class="plan-name">Plan Premium</h2>
+                <p class="plan-price">$39.99/mes</p>
+                <ul class="plan-features">
+                    <li>Todas las funciones del Plan Básico</li>
+                    <li>Soporte prioritario vía chat</li>
+                    <li>Hasta 5 usuarios autorizados</li>
+                    <li>20GB de almacenamiento en la nube</li>
+                    <li>Reportes estadísticos detallados</li>
+                </ul>
+                <a href="#" class="plan-button">Contratar Ahora</a>
+            </div>
+
+            <div class="plan-box">
+                <h2 class="plan-name">Plan Empresa</h2>
+                <p class="plan-price">$79.99/mes</p>
+                <ul class="plan-features">
+                    <li>Todas las funciones del Plan Premium</li>
+                    <li>Soporte 24/7 dedicado</li>
+                    <li>Usuarios ilimitados</li>
+                    <li>100GB de almacenamiento en la nube</li>
+                    <li>Integraciones con herramientas externas</li>
+                </ul>
+                <a href="#" class="plan-button">Contratar Ahora</a>
+            </div>
         </section>
 
-    <!-- SECCIÓN ¿POR QUÉ ELEGIR SYNKRA? -->
-    <section class="why-us">
-        <h3>¿POR QUÉ ELEGIR SYNKRA?</h3>
-        <ul>
-            <li>Estrategias adaptadas a tu negocio</li>
-            <li>Resultados medibles y garantizados</li>
-            <li>Pago flexible por servicios</li>
-            <li>Atención personalizada según tu plan (24/7 en planes premium)</li>
-        </ul>
-    </section>
-
-    <!-- SECCIÓN SERVICIOS -->
-    <section class="services">
-        <h3>NUESTROS SERVICIOS</h3>
-        <div class="service-card">
-            <h4>GESTIÓN DE REDES SOCIALES</h4>
-            <ul>
-                <li>Creación de contenido adaptado a tu marca</li>
-                <li>Programación de publicaciones</li>
-                <li>Interacción con tu audiencia</li>
-                <li>Diseño de imágenes y videos cortos</li>
-            </ul>
-        </div>
-        <div class="service-card">
-            <h4>AUTOMATIZACIÓN DE CHATS</h4>
-            <ul>
-                <li>Respuestas instantáneas a preguntas frecuentes</li>
-                <li>Captura de datos de clientes potenciales</li>
-                <li>Agendamiento automático de citas</li>
-                <li>Integración con WhatsApp y Messenger</li>
-            </ul>
-        </div>
-        <div class="service-card">
-            <h4>PUBLICIDAD DIGITAL</h4>
-            <ul>
-                <li>Campañas en Facebook, Instagram y Google</li>
-                <li>Segmentación de público objetivo</li>
-                <li>Monitoreo y optimización constante</li>
-                <li>Reportes de resultados en tiempo real</li>
-            </ul>
-        </div>
-        <div class="service-card">
-            <h4>DISEÑO Y OPTIMIZACIÓN DE SITIOS WEB</h4>
-            <ul>
-                <li>Sitios responsivos para celular y computador</li>
-                <li>Optimización para motores de búsqueda</li>
-                <li>Integración con sistemas de pago</li>
-                <li>Diseño adaptado a tu identidad de marca</li>
-            </ul>
-        </div>
-    </section>
-
-    <!-- SECCIÓN PLANES -->
-    <section class="plans" id="planes">
-        <h3>NUESTROS PLANES</h3>
-        <div class="plan-card">
-            <h4>PLAN EMPRENDEDOR</h4>
-            <div class="price">$150.000/mes</div>
-            <ul>
-                <li>Gestión de 1 red social</li>
-                <li>10 publicaciones al mes</li>
-                <li>Chat automatizado básico</li>
-                <li>Reporte mensual</li>
-                <li>Atención de lunes a viernes 8:00 AM - 8:00 PM</li>
-            </ul>
-            <a href="https://wa.me/573008836354?text=Hola%20Synkra,%20quiero%20obtener%20el%20Plan%20Emprendedor" class="btn btn-green" target="_blank">Obtener Plan Emprendedor</a>
-            <a href="https://wa.me/573008836354?text=Hola%20Synkra,%20quiero%20más%20información%20del%20Plan%20Emprendedor" class="btn btn-blue" target="_blank">Más info</a>
-            <div class="payment-note">Pagos por PSE o transferencia bancaria</div>
-        </div>
-        <div class="plan-card">
-            <h4>PLAN BÁSICO</h4>
-            <div class="price">$300.000/mes</div>
-            <ul>
-                <li>Gestión de 2 redes sociales</li>
-                <li>20 publicaciones al mes</li>
-                <li>Chat automatizado completo</li>
-                <li>Reporte semanal + mensual</li>
-                <li>Análisis de competidores</li>
-                <li>Atención de lunes a viernes 8:00 AM - 8:00 PM | Sábados 9:00 AM - 1:00 PM</li>
-            </ul>
-            <a href="https://wa.me/573008836354?text=Hola%20Synkra,%20quiero%20obtener%20el%20Plan%20Básico" class="btn btn-green" target="_blank">Obtener Plan Básico</a>
-            <a href="https://wa.me/573008836354?text=Hola%20Synkra,%20quiero%20más%20información%20del%20Plan%20Básico" class="btn btn-blue" target="_blank">Más info</a>
-            <div class="payment-note">Pagos por PSE o transferencia bancaria</div>
-        </div>
-        <div class="plan-card">
-            <h4>PLAN ESTÁNDAR PREMIUM</h4>
-            <div class="price">$500.000/mes</div>
-            <ul>
-                <li>Gestión de 3 redes sociales</li>
-                <li>30 publicaciones al mes</li>
-                <li>Chat + atención humana</li>
-                <li>Reportes detallados</li>
-                <li>Campañas de publicidad básicas</li>
-                <li>Diseño de contenido exclusivo</li>
-                <li>ATENCIÓN PERSONALIZADA 24/7</li>
-            </ul>
-            <a href="https://wa.me/573008836354?text=Hola%20Synkra,%20quiero%20obtener%20el%20Plan%20Estándar%20Premium" class="btn btn-green" target="_blank">Obtener Plan Estándar Premium</a>
-            <a href="https://wa.me/573008836354?text=Hola%20Synkra,%20quiero%20más%20información%20del%20Plan%20Estándar%20Premium" class="btn btn-blue" target="_blank">Más info</a>
-            <div class="payment-note">Pagos por PSE o transferencia bancaria</div>
-        </div>
-        <div class="plan-card">
-            <h4>PLAN PREMIUM EXCLUSIVO</h4>
-            <div class="price">$800.000/mes</div>
-            <ul>
-                <li>Gestión de 4+ redes sociales</li>
-                <li>Contenido ilimitado</li>
-                <li>Campañas de publicidad avanzadas</li>
-                <li>Optimización de sitio web</li>
-                <li>Asesoría estratégica mensual</li>
-                <li>ATENCIÓN PERSONALIZADA 24/7</li>
-            </ul>
-            <a href="https://wa.me/573008836354?text=Hola%20Synkra,%20quiero%20obtener%20el%20Plan%20Premium%20Exclusivo" class="btn btn-green" target="_blank">Obtener Plan Premium Exclusivo</a>
-            <a href="https://wa.me/573008836354?text=Hola%20Synkra,%20quiero%20más%20información%20del%20Plan%20Premium%20Exclusivo" class="btn btn-blue" target="_blank">Más info</a>
-            <div class="payment-note">Pagos por PSE o transferencia bancaria</div>
-        </div>
-    </section>
-
-    <!-- FORMULARIO DE CONTACTO PRINCIPAL (ESTRATÉGICO) -->
-    <section class="contact-form-section" id="contact-form">
-        <h3>DEJANOS TU CONTACTO</h3>
-        <p>Si prefieres que nosotros te llamemos o escribamos, completa tus datos aquí:</p>
-        <form class="contact-form" action="https://formsubmit.co/synkra2026@gmail.com" method="POST" onsubmit="showLoading()">
-            <!-- Configuración para que lleguen bien los datos al correo -->
-            <input type="hidden" name="_subject" value="🚀 NUEVO CLIENTE POTENCIAL - Synkra Colombia">
-            <input type="hidden" name="_next" value="https://synkra-colombia.github.io">
-            <input type="hidden" name="_captcha" value="false">
-            <input type="hidden" name="_template" value="table"> <!-- Datos en tabla para mayor orden -->
-
-            <div class="form-group">
-                <label for="name">Nombre completo</label>
-                <input type="text" id="name" name="name" required placeholder="Ej: Juan Pérez">
+        <!-- SECCIÓN PREGUNTAS FRECUENTES -->
+        <section class="faq">
+            <h3>PREGUNTAS FRECUENTES</h3>
+            <div class="faq-item">
+                <h4>¿Cuánto tiempo tarda en empezar a ver resultados?</h4>
+                <p>Dependiendo del plan y del estado actual de tu negocio, generalmente se empiezan a ver mejoras en 2-4 semanas.</p>
             </div>
-            <div class="form-group">
-                <label for="phone">Número de contacto</label>
-                <input type="tel" id="phone" name="phone" required placeholder="Ej: +57 300 123 4567">
+            <div class="faq-item">
+                <h4>¿Puedo cambiar de plan en cualquier momento?</h4>
+                <p>Sí, puedes cambiar de plan o cancelarlo en cualquier momento sin costos adicionales.</p>
             </div>
-            <div class="form-group">
-                <label for="email">Correo electrónico (opcional)</label>
-                <input type="email" id="email" name="email" placeholder="Ej: tuemail@dominio.com">
+            <div class="faq-item">
+                <h4>¿Incluyen el registro de dominios o hosting?</h4>
+                <p>No, pero podemos asesorarte y ayudar a contratar estos servicios con proveedores confiables.</p>
             </div>
-            <button type="submit" class="submit-btn" id="submitBtn">Enviar mis datos</button>
-            <div class="loading-message" id="loadingMsg">Enviando tus datos... ¡Muy pronto te contactamos!</div>
-        </form>
-        <p class="form-note">*Tus datos serán usados solo para contactarte y ofrecerte nuestros servicios.</p>
-    </section>
+            <div class="faq-item">
+                <h4>¿Ofrecen garantías de resultados?</h4>
+                <p>Sí – trabajamos con metas claras y si no se cumplen, te ofrecemos un período adicional de servicio sin costo.</p>
+            </div>
+        </section>
 
-    <!-- SECCIÓN PREGUNTAS FRECUENTES -->
-    <section class="faq">
-        <h3>PREGUNTAS FRECUENTES</h3>
-        <div class="faq-item">
-            <h4>¿Cuánto tiempo tarda en empezar a ver resultados?</h4>
-            <p>Dependiendo del plan y del estado actual de tu negocio, generalmente se empiezan a ver mejoras en los primeros 30 días.</p>
-        </div>
-        <div class="faq-item">
-            <h4>¿Puedo cambiar de plan en cualquier momento?</h4>
-            <p>Sí, puedes cambiar de plan o cancelarlo en cualquier momento sin costo adicional.</p>
-        </div>
-        <div class="faq-item">
-            <h4>¿Incluyen el registro de dominios o hosting?</h4>
-            <p>No, pero podemos asesorarte y ayudarte a contratar estos servicios con proveedores confiables.</p>
-        </div>
-        <div class="faq-item">
-            <h4>¿Ofrecen garantías de resultados?</h4>
-            <p>Sí – trabajamos con metas claras y si no se cumplen, te ofrecemos un mes adicional de servicio sin costo.</p>
-        </div>
-    </section>
+        <!-- SECCIÓN CONTACTO -->
+        <section class="contact-section">
+            <h3>CONTACTO</h3>
+            <p><a href="https://wa.me/573008836354" target="_blank" rel="noopener noreferrer">WhatsApp: +57 300 883 6354</a></p>
+            <p><a href="mailto:synkra2026@gmail.com" target="_blank" rel="noopener noreferrer">Email: synkra2026@gmail.com</a></p>
+            <p>Ubicación: Medellín, Antioquia - Colombia</p>
+            <p class="hours-note">Horario de atención general: Lunes a Viernes 8:00 AM - 6:00 PM</p>
+            
+            <div class="social-section">
+                <p>SÍGUENOS EN REDES</p>
+                <a href="https://instagram.com/Synkracol" class="social-btn" target="_blank" rel="noopener noreferrer">Instagram</a>
+                <a href="https://facebook.com/Synkracol" class="social-btn" target="_blank" rel="noopener noreferrer">Facebook</a>
+            </div>
+        </section>
 
-    <!-- SECCIÓN CONTACTO -->
-    <section class="contact">
-        <h3>CONTACTO</h3>
-        <p><a href="https://wa.me/573008836354" target="_blank">WhatsApp: +57 300 883 6354</a></p>
-        <p><a href="mailto:synkra2026@gmail.com" target="_blank">Email: synkra2026@gmail.com</a></p>
-        <p>📍 Ubicación: Medellín, Antioquia - Colombia</p>
-        <p class="hours-note">🕒 Horario de atención general: Lunes a Viernes 8:00 AM - 8:00 PM | Sábados 9:00 AM - 1:00 PM<br>Para planes premium (Estándar Premium y Premium Exclusivo): Atención 24/7</p>
-        
-        <div class="social-section">
-            <p>SÍGUENOS EN REDES</p>
-            <a href="https://instagram.com/Synkracol" class="social-btn social-instagram" target="_blank">Instagram @Synkracol</a>
-            <a href="https://facebook.com/Synkracol" class="social-btn social-facebook" target="_blank">Facebook Synkracol</a>
-        </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer class="footer">
-        <div class="social-links">
-            <a href="https://instagram.com/Synkracol" class="social-btn social-instagram" target="_blank" style="padding: 5px 15px; font-size: 0.9rem;">@Synkracol</a>
-            <a href="https://facebook.com/Synkracol" class="social-btn social-facebook" target="_blank" style="padding: 5px 15px; font-size: 0.9rem;">Synkracol</a>
-        </div>
-        <p>© 2026 Synkra - Todos los derechos reservados<br>Servicios digitales para hacer crecer tu negocio</p>
-    </footer>
+        <!-- FOOTER -->
+        <footer class="footer">
+            <div class="social-links">
+                <a href="https://instagram.com/Synkracol" class="social-btn" target="_blank" rel="noopener noreferrer">Instagram</a>
+                <a href="https://facebook.com/Synkracol" class="social-btn" target="_blank" rel="noopener noreferrer">Facebook</a>
+            </div>
+            <p>© 2026 Synkra - Todos los derechos reservados<br>Servicios digitales para empresas y emprendedores</p>
+        </footer>
+    </div>
 
     <!-- SCRIPT PARA MENSAJE DE CARGA -->
     <script>
         function showLoading() {
-            document.getElementById('submitBtn').disabled = true;
-            document.getElementById('loadingMsg').style.display = 'block';
+            const btn = document.getElementById('submitBtn');
+            const msg = document.getElementById('loadingMsg');
+            if(btn && msg) {
+                btn.disabled = true;
+                msg.style.display = 'block';
+            }
         }
     </script>
-
 </body>
-    </html>
-    
+</html>
