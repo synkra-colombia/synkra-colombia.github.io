@@ -1,4 +1,4 @@
-      <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -15,6 +15,26 @@
             background-color: #0a192f;
             color: #f8f9fa;
             line-height: 1.6;
+            padding-bottom: 100px; /* Espacio para el botón fijo */
+        }
+
+        /* BOTÓN FIJO DE CONTACTO (VENTANA PEQUEÑA) */
+        .fixed-contact-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25d366;
+            color: white;
+            padding: 12px 18px;
+            border-radius: 50px;
+            font-weight: bold;
+            text-decoration: none;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            z-index: 1000;
+            transition: background-color 0.3s ease;
+        }
+        .fixed-contact-btn:hover {
+            background-color: #128c7e;
         }
 
         /* ENCABEZADO SOLO CON NOMBRE DE LA EMPRESA */
@@ -91,7 +111,7 @@
             background-color: #128c7e;
         }
 
-        /* FORMULARIO DE CONTACTO */
+        /* FORMULARIO DE CONTACTO PRINCIPAL */
         .contact-form-section {
             padding: 50px 20px;
             max-width: 800px;
@@ -410,6 +430,9 @@
     </style>
 </head>
 <body>
+    <!-- BOTÓN FIJO PEQUEÑO DE CONTACTO -->
+    <a href="#contact-form" class="fixed-contact-btn">Dejanos tu contacto</a>
+
     <!-- ENCABEZADO SOLO CON NOMBRE DE LA EMPRESA -->
     <header class="header">
         <h1>Synkra</h1>
@@ -420,30 +443,9 @@
     <section class="hero">
         <h2>¿Cansado de perder clientes por falta de respuesta o estrategia digital?</h2>
         <p>Automatiza tus chats, gestiona tus perfiles y convierte más leads – cada cliente cuenta.</p>
-        <a href="https://wa.me/573008836354?text=Hola%20Synkra,%20quiero%20agendar%20mi%20consulta%20gratuita" class="btn btn-whatsapp" target="_blank">Agenda tu consulta</a>
-        <a href="#planes" class="btn btn-blue">Conoce nuestros planes</a>
-    </section>
-
-    <!-- SECCIÓN FORMULARIO DE CONTACTO NUEVO -->
-    <section class="contact-form-section">
-        <h3>DEJANOS TU CONTACTO</h3>
-        <p>Si prefieres que nosotros te llamemos o escribamos, completa tus datos aquí:</p>
-        <form class="contact-form" action="https://formsubmit.co/synkra2026@gmail.com" method="POST">
-            <div class="form-group">
-                <label for="name">Nombre completo</label>
-                <input type="text" id="name" name="name" required placeholder="Ej: Juan Pérez">
-            </div>
-            <div class="form-group">
-                <label for="phone">Número de contacto</label>
-                <input type="tel" id="phone" name="phone" required placeholder="Ej: +57 300 123 4567">
-            </div>
-            <div class="form-group">
-                <label for="email">Correo electrónico (opcional)</label>
-                <input type="email" id="email" name="email" placeholder="Ej: tuemail@dominio.com">
-            </div>
-            <button type="submit" class="submit-btn">Enviar mis datos</button>
-                   </form>
-            <p class="form-note">*Tus datos serán usados solo para contactarte y ofrecerte nuestros servicios.</p>
+        <a href="https://wa.me/573008836354?text=Hola%20Synkra,%20quiero%20agendar
+%20mi%20consulta%20gratuita" class="btn btn-whatsapp" target="_blank">Agenda tu consulta</a>
+            <a href="#planes" class="btn btn-blue">Conoce nuestros planes</a>
         </section>
 
     <!-- SECCIÓN ¿POR QUÉ ELEGIR SYNKRA? -->
@@ -563,6 +565,28 @@
         </div>
     </section>
 
+    <!-- FORMULARIO DE CONTACTO PRINCIPAL (ESTRATÉGICO) -->
+    <section class="contact-form-section" id="contact-form">
+        <h3>DEJANOS TU CONTACTO</h3>
+        <p>Si prefieres que nosotros te llamemos o escribamos, completa tus datos aquí:</p>
+        <form class="contact-form" action="https://formsubmit.co/synkra2026@gmail.com" method="POST">
+            <div class="form-group">
+                <label for="name">Nombre completo</label>
+                <input type="text" id="name" name="name" required placeholder="Ej: Juan Pérez">
+            </div>
+            <div class="form-group">
+                <label for="phone">Número de contacto</label>
+                <input type="tel" id="phone" name="phone" required placeholder="Ej: +57 300 123 4567">
+            </div>
+            <div class="form-group">
+                <label for="email">Correo electrónico (opcional)</label>
+                <input type="email" id="email" name="email" placeholder="Ej: tuemail@dominio.com">
+            </div>
+            <button type="submit" class="submit-btn">Enviar mis datos</button>
+        </form>
+        <p class="form-note">*Tus datos serán usados solo para contactarte y ofrecerte nuestros servicios.</p>
+    </section>
+
     <!-- SECCIÓN PREGUNTAS FRECUENTES -->
     <section class="faq">
         <h3>PREGUNTAS FRECUENTES</h3>
@@ -610,4 +634,3 @@
 
 </body>
 </html>
-           
