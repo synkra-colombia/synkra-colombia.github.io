@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+      <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -83,12 +83,77 @@
         .btn-blue:hover {
             background-color: #0077b6;
         }
-        .btn-yellow {
-            background-color: #ffc107;
-            color: #0a192f;
+        .btn-green {
+            background-color: #25d366;
+            color: white;
         }
-        .btn-yellow:hover {
-            background-color: #ff8c00;
+        .btn-green:hover {
+            background-color: #128c7e;
+        }
+
+        /* FORMULARIO DE CONTACTO */
+        .contact-form-section {
+            padding: 50px 20px;
+            max-width: 800px;
+            margin: 30px auto;
+            background-color: #112240;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .contact-form-section h3 {
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+            color: #00b4d8;
+            border-bottom: 2px solid #00b4d8;
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .form-group {
+            text-align: left;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #00b4d8;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 12px;
+            border-radius: 5px;
+            border: none;
+            background-color: #0a192f;
+            color: #f8f9fa;
+            font-size: 1rem;
+        }
+        .form-group input:focus {
+            outline: 2px solid #25d366;
+        }
+        .submit-btn {
+            background-color: #25d366;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .submit-btn:hover {
+            background-color: #128c7e;
+        }
+        .form-note {
+            font-size: 0.9rem;
+            color: #adb5bd;
+            margin-top: 15px;
         }
 
         /* BOTONES DE REDES SOCIALES */
@@ -359,6 +424,28 @@
         <a href="#planes" class="btn btn-blue">Conoce nuestros planes</a>
     </section>
 
+    <!-- SECCIÓN FORMULARIO DE CONTACTO NUEVO -->
+    <section class="contact-form-section">
+        <h3>DEJANOS TU CONTACTO</h3>
+        <p>Si prefieres que nosotros te llamemos o escribamos, completa tus datos aquí:</p>
+        <form class="contact-form" action="https://formsubmit.co/synkra2026@gmail.com" method="POST">
+            <div class="form-group">
+                <label for="name">Nombre completo</label>
+                <input type="text" id="name" name="name" required placeholder="Ej: Juan Pérez">
+            </div>
+            <div class="form-group">
+                <label for="phone">Número de contacto</label>
+                <input type="tel" id="phone" name="phone" required placeholder="Ej: +57 300 123 4567">
+            </div>
+            <div class="form-group">
+                <label for="email">Correo electrónico (opcional)</label>
+                <input type="email" id="email" name="email" placeholder="Ej: tuemail@dominio.com">
+            </div>
+            <button type="submit" class="submit-btn">Enviar mis datos</button>
+                   </form>
+            <p class="form-note">*Tus datos serán usados solo para contactarte y ofrecerte nuestros servicios.</p>
+        </section>
+
     <!-- SECCIÓN ¿POR QUÉ ELEGIR SYNKRA? -->
     <section class="why-us">
         <h3>¿POR QUÉ ELEGIR SYNKRA?</h3>
@@ -424,9 +511,8 @@
                 <li>Reporte mensual</li>
                 <li>Atención de lunes a viernes 8:00 AM - 8:00 PM</li>
             </ul>
-            <a href="https://wa.me/573008836354?text=Hola%20Synkra,%20quiero%20solicitar%20el%20link%20de%20pago%20del%20
-            Plan%20Emprendedor" class="btn btn-yellow" target="_blank">Solicitar link de pago</a>
-            <a href="https://wa.me/573008836354?text=Hola%20Synkra,%20quiero%20más%20información%20del%20Plan%20Emprendedor" class="btn btn-whatsapp" target="_blank">Más info</a>
+            <a href="https://wa.me/573008836354?text=Hola%20Synkra,%20quiero%20obtener%20el%20Plan%20Emprendedor" class="btn btn-green" target="_blank">Obtener Plan Emprendedor</a>
+            <a href="https://wa.me/573008836354?text=Hola%20Synkra,%20quiero%20más%20información%20del%20Plan%20Emprendedor" class="btn btn-blue" target="_blank">Más info</a>
             <div class="payment-note">Pagos por PSE o transferencia bancaria</div>
         </div>
         <div class="plan-card">
@@ -440,8 +526,8 @@
                 <li>Análisis de competidores</li>
                 <li>Atención de lunes a viernes 8:00 AM - 8:00 PM | Sábados 9:00 AM - 1:00 PM</li>
             </ul>
-            <a href="https://wa.me/573008836354?text=Hola%20Synkra,%20quiero%20solicitar%20el%20link%20de%20pago%20del%20Plan%20Básico" class="btn btn-yellow" target="_blank">Solicitar link de pago</a>
-            <a href="https://wa.me/573008836354?text=Hola%20Synkra,%20quiero%20más%20información%20del%20Plan%20Básico" class="btn btn-whatsapp" target="_blank">Más info</a>
+            <a href="https://wa.me/573008836354?text=Hola%20Synkra,%20quiero%20obtener%20el%20Plan%20Básico" class="btn btn-green" target="_blank">Obtener Plan Básico</a>
+            <a href="https://wa.me/573008836354?text=Hola%20Synkra,%20quiero%20más%20información%20del%20Plan%20Básico" class="btn btn-blue" target="_blank">Más info</a>
             <div class="payment-note">Pagos por PSE o transferencia bancaria</div>
         </div>
         <div class="plan-card">
@@ -456,8 +542,8 @@
                 <li>Diseño de contenido exclusivo</li>
                 <li>ATENCIÓN PERSONALIZADA 24/7</li>
             </ul>
-            <a href="https://wa.me/573008836354?text=Hola%20Synkra,%20quiero%20solicitar%20el%20link%20de%20pago%20del%20Plan%20Estándar%20Premium" class="btn btn-yellow" target="_blank">Solicitar link de pago</a>
-            <a href="https://wa.me/573008836354?text=Hola%20Synkra,%20quiero%20más%20información%20del%20Plan%20Estándar%20Premium" class="btn btn-whatsapp" target="_blank">Más info</a>
+            <a href="https://wa.me/573008836354?text=Hola%20Synkra,%20quiero%20obtener%20el%20Plan%20Estándar%20Premium" class="btn btn-green" target="_blank">Obtener Plan Estándar Premium</a>
+            <a href="https://wa.me/573008836354?text=Hola%20Synkra,%20quiero%20más%20información%20del%20Plan%20Estándar%20Premium" class="btn btn-blue" target="_blank">Más info</a>
             <div class="payment-note">Pagos por PSE o transferencia bancaria</div>
         </div>
         <div class="plan-card">
@@ -471,8 +557,8 @@
                 <li>Asesoría estratégica mensual</li>
                 <li>ATENCIÓN PERSONALIZADA 24/7</li>
             </ul>
-            <a href="https://wa.me/573008836354?text=Hola%20Synkra,%20quiero%20solicitar%20el%20link%20de%20pago%20del%20Plan%20Premium%20Exclusivo" class="btn btn-yellow" target="_blank">Solicitar link de pago</a>
-            <a href="https://wa.me/573008836354?text=Hola%20Synkra,%20quiero%20más%20información%20del%20Plan%20Premium%20Exclusivo" class="btn btn-whatsapp" target="_blank">Más info</a>
+            <a href="https://wa.me/573008836354?text=Hola%20Synkra,%20quiero%20obtener%20el%20Plan%20Premium%20Exclusivo" class="btn btn-green" target="_blank">Obtener Plan Premium Exclusivo</a>
+            <a href="https://wa.me/573008836354?text=Hola%20Synkra,%20quiero%20más%20información%20del%20Plan%20Premium%20Exclusivo" class="btn btn-blue" target="_blank">Más info</a>
             <div class="payment-note">Pagos por PSE o transferencia bancaria</div>
         </div>
     </section>
@@ -524,3 +610,4 @@
 
 </body>
 </html>
+           
