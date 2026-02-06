@@ -22,11 +22,11 @@
             --color-gris-claro: #f8f9fa;
             --color-gris-oscuro: #555;
             --color-menu: #f97316;
-            --color-borde-plan: #3498db; /* Color del borde de los planes */
-            --ancho-borde-plan: 2px; /* Ancho del borde igual al destacado */
+            --color-borde-plan: #3498db; 
+            --ancho-borde-plan: 2px; 
         }
 
-        /* ENCABEZADO ESTILO ADSMURAI */
+        /* ENCABEZADO */
         header {
             background-color: var(--color-blanco);
             padding: 1rem 5%;
@@ -62,7 +62,7 @@
             border-radius: 2px;
         }
 
-        /* Sección Principal */
+        /* SECCIÓN PRINCIPAL */
         .seccion-principal {
             background-color: var(--color-gris-claro);
             padding: 4rem 5%;
@@ -89,7 +89,7 @@
             margin: 0 auto;
         }
 
-        /* Sección ¿Por qué Elegir Synkra? */
+        /* ¿POR QUÉ ELEGIR SYNKRA? */
         .porque-synkra {
             padding: 4rem 5%;
         }
@@ -122,7 +122,7 @@
             color: var(--color-exito);
         }
 
-        /* Sección Nuestros Servicios */
+        /* NUESTROS SERVICIOS */
         .servicios {
             padding: 4rem 5%;
             background-color: var(--color-gris-claro);
@@ -173,7 +173,7 @@
             margin-right: 0.5rem;
         }
 
-        /* Sección Nuestros Planes */
+        /* NUESTROS PLANES */
         .planes {
             padding: 4rem 5%;
         }
@@ -198,7 +198,7 @@
             border-radius: 8px;
             box-shadow: 0 3px 6px rgba(0,0,0,0.1);
             transition: transform 0.3s ease;
-            border: var(--ancho-borde-plan) solid var(--color-borde-plan); /* BORDE PARA TODOS LOS PLANES */
+            border: var(--ancho-borde-plan) solid var(--color-borde-plan);
         }
 
         .plan-card:hover {
@@ -206,8 +206,8 @@
         }
 
         .plan-card.destacado {
-            transform: scale(1.02); /* Solo escala para destacar, el borde ya es igual */
-            box-shadow: 0 5px 10px rgba(0,0,0,0.15); /* Sombra más marcada para destacar */
+            transform: scale(1.02);
+            box-shadow: 0 5px 10px rgba(0,0,0,0.15);
         }
 
         .plan-card h3 {
@@ -258,7 +258,7 @@
             justify-content: center;
         }
 
-        /* Botón Obtener Plan - VERDE */
+        /* BOTONES */
         .btn-plan {
             background-color: var(--color-exito);
             color: var(--color-blanco);
@@ -273,7 +273,6 @@
             background-color: var(--color-exito-hover);
         }
 
-        /* Botón Más Info - AZUL */
         .btn-masinfo {
             background-color: var(--color-acento);
             color: var(--color-blanco);
@@ -288,7 +287,7 @@
             background-color: var(--color-acento-hover);
         }
 
-        /* Sección Dejanos Tu Contacto */
+        /* FORMULARIO DE CONTACTO */
         .contacto-formulario {
             padding: 4rem 5%;
             background-color: var(--color-gris-claro);
@@ -352,7 +351,7 @@
             margin-top: 1rem;
         }
 
-        /* Sección Preguntas Frecuentes */
+        /* PREGUNTAS FRECUENTES */
         .preguntas-frecuentes {
             padding: 4rem 5%;
         }
@@ -375,7 +374,7 @@
             padding: 1.5rem;
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            border: 1px solid var(--color-borde-plan); /* Borde también en preguntas si quieres uniformidad */
+            border: 1px solid var(--color-borde-plan);
         }
 
         .pregunta h3 {
@@ -389,7 +388,7 @@
             color: var(--color-gris-oscuro);
         }
 
-        /* Sección Contacto y Redes */
+        /* CONTACTO Y REDES */
         .contacto-redes {
             padding: 4rem 5%;
             background-color: var(--color-gris-claro);
@@ -435,7 +434,7 @@
             background-color: #34495e;
         }
 
-        /* Pie de Página */
+        /* PIE DE PÁGINA */
         footer {
             background-color: var(--color-principal);
             color: var(--color-blanco);
@@ -466,7 +465,7 @@
     </style>
 </head>
 <body>
-    <!-- ENCABEZADO FINAL -->
+    <!-- ENCABEZADO -->
     <header>
         <div class="logo">
             <h1>Synkra</h1>
@@ -478,14 +477,14 @@
         </div>
     </header>
 
-    <!-- Sección Principal -->
+    <!-- SECCIÓN PRINCIPAL -->
     <section class="seccion-principal">
         <h2>Synkra</h2>
         <p class="eslogan">Sincroniza. Automatiza. Vende.</p>
         <p>El futuro digital empieza cuando entiendes a tus clientes.</p>
     </section>
 
-    <!-- Sección ¿Por qué Elegir Synkra? -->
+    <!-- ¿POR QUÉ ELEGIR SYNKRA? -->
     <section class="porque-synkra" id="porque">
         <h2>¿Por qué Elegir Synkra?</h2>
         <ul class="caracteristicas-lista">
@@ -496,7 +495,7 @@
         </ul>
     </section>
 
-    <!-- Sección Nuestros Servicios -->
+    <!-- NUESTROS SERVICIOS -->
     <section class="servicios" id="servicios">
         <h2>Nuestros Servicios</h2>
         <div class="servicios-container">
@@ -504,179 +503,179 @@
                 <h3>GESTIÓN DE REDES SOCIALES</h3>
                 <ul>
                     <li>Contenido visual/escrito adaptado a plataformas (Instagram, Facebook, TikTok, LinkedIn)</li>
-
-                                        <li>Programación automática y gestión de interacciones | Diseño de piezas exclusivas</li>
+                    <li>Programación automática y gestión de interacciones | Diseño de piezas exclusivas</li>
                     <li>Apoyo IA: Sugerencias de contenido y análisis de rendimiento</li>
                     <li>Apoyo HUMANO: Estrategia personalizada y atención a detalles</li>
                 </ul>
             </div>
             <div class="servicio-card">
-                <h3>AUTOMATIZACIÓN DE CHATS</h3>
-                <ul>
-                    <li>Flujos de conversación inteligentes | Respuestas instantáneas y captura de leads</li>
-                    <li>Agendamiento automático de citas/pedidos</li>
-                    <li>Apoyo IA: Configuración personalizada y detección de necesidades</li>
-                    <li>Apoyo HUMANO: Monitoreo y atención a casos complejos</li>
-                </ul>
-            </div>
-            <div class="servicio-card">
-                <h3>PUBLICIDAD DIGITAL</h3>
-                <ul>
-                    <li>Campañas en Facebook, Instagram y Google Ads | Segmentación avanzada y diseños optimizados</li>
-                    <li>Seguimiento de métricas clave</li>
-                    <li>Apoyo IA: Optimización de inversión y predicción de resultados</li>
-                    <li>Apoyo HUMANO: Creación de mensajes que conectan</li>
-                </ul>
-            </div>
-            <div class="servicio-card">
-                <h3>DISEÑO Y OPTIMIZACIÓN DE SITIOS WEB</h3>
-                <ul>
-                    <li>Diseño responsivo y navegación intuitiva | SEO básico y pasarelas de pago</li>
-                    <li>Contenido web actualizado</li>
-                    <li>Apoyo IA: Sugerencias de estructura y optimización de velocidad</li>
-                    <li>Apoyo HUMANO: Diseño centrado en la experiencia del usuario</li>
-                </ul>
-            </div>
+                           <h3>AUTOMATIZACIÓN DE CHATS</h3>
+            <ul>
+                <li>Flujos de conversación inteligentes | Respuestas instantáneas y captura de leads</li>
+                <li>Agendamiento automático de citas/pedidos</li>
+                <li>Apoyo IA: Configuración personalizada y detección de necesidades</li>
+                <li>Apoyo HUMANO: Monitoreo y atención a casos complejos</li>
+            </ul>
         </div>
-    </section>
+        <div class="servicio-card">
+            <h3>PUBLICIDAD DIGITAL</h3>
+            <ul>
+                <li>Campañas en Facebook, Instagram y Google Ads | Segmentación avanzada y diseños optimizados</li>
+                <li>Seguimiento de métricas clave</li>
+                <li>Apoyo IA: Optimización de inversión y predicción de resultados</li>
+                <li>Apoyo HUMANO: Creación de mensajes que conectan</li>
+            </ul>
+        </div>
+        <div class="servicio-card">
+            <h3>DISEÑO Y OPTIMIZACIÓN DE SITIOS WEB</h3>
+            <ul>
+                <li>Diseño responsivo y navegación intuitiva | SEO básico y pasarelas de pago</li>
+                <li>Contenido web actualizado</li>
+                <li>Apoyo IA: Sugerencias de estructura y optimización de velocidad</li>
+                <li>Apoyo HUMANO: Diseño centrado en la experiencia del usuario</li>
+            </ul>
+        </div>
+    </div>
+</section>
 
-    <!-- Sección Nuestros Planes -->
-    <section class="planes" id="planes">
-        <h2>Nuestros Planes</h2>
-        <div class="planes-container">
-            <div class="plan-card">
-                <h3>PLAN EMPRENDEDOR</h3>
-                <div class="precio">$200.000/mes</div>
-                <ul>
-                    <li>Gestión de 1 red social</li>
-                    <li>10 publicaciones al mes</li>
-                    <li>Chat automatizado básico + apoyo humano ocasional</li>
-                    <li>Reporte mensual preparado por equipo humano</li>
-                    <li>Atención L-V 8:00 AM - 8:00 PM</li>
-                </ul>
-                <div class="plan-botones">
-                    <a href="https://wa.me/573008836354" target="_blank" class="btn-plan">Obtener Plan Emprendedor</a>
-                    <a href="#contacto" class="btn-masinfo">Más info</a>
-                </div>
-            </div>
-            <div class="plan-card">
-                <h3>PLAN BÁSICO</h3>
-                <div class="precio">$350.000/mes</div>
-                <ul>
-                    <li>Gestión de 2 redes sociales</li>
-                    <li>20 publicaciones al mes</li>
-                    <li>Chat automatizado completo + apoyo humano regular</li>
-                    <li>Reporte semanal + mensual con análisis humano</li>
-                    <li>Análisis de competidores</li>
-                    <li>Atención L-V 8:00 AM - 8:00 PM | Sáb 9:00 AM - 1:00 PM</li>
-                </ul>
-                <div class="plan-botones">
-                    <a href="https://wa.me/573008836354" target="_blank" class="btn-plan">Obtener Plan Básico</a>
-                    <a href="#contacto" class="btn-masinfo">Más info</a>
-                </div>
-            </div>
-            <div class="plan-card destacado">
-                <h3>PLAN ESTÁNDAR PREMIUM</h3>
-                <div class="precio">$700.000/mes</div>
-                <ul>
-                    <li>✅ IA: Sugerencias de contenido, Análisis de datos</li>
-                    <li>✅ Humano: Asesor asignado, atención personalizada</li>
-                    <li>Gestión de 3 redes sociales</li>
-                    <li>30 publicaciones al mes</li>
-                    <li>Chat + atención humana exclusiva | Reportes detallados</li>
-                    <li>Campañas de publicidad básicas | Diseño de contenido exclusivo</li>
-                    <li>Atención 24/7</li>
-                </ul>
-                <div class="plan-botones">
-                    <a href="https://wa.me/573008836354" target="_blank" class="btn-plan">Obtener Plan Estándar Premium</a>
-                    <a href="#contacto" class="btn-masinfo">Más info</a>
-                </div>
-            </div>
-            <div class="plan-card">
-                <h3>PLAN PREMIUM EXCLUSIVO SYNKRA</h3>
-                <div class="precio">$1.200.000/mes</div>
-                <ul>
-                    <li>✅ IA: Optimización de procesos, Análisis de datos profundo, Dirigido por Synkra</li>
-                    <li>✅ Equipo: Coordinador estratégico, diseñador, community manager y publicista</li>
-                    <li>Gestión de 4 redes sociales | Contenido + Publicidad avanzada</li>
-                    <li>Seguimiento integral + Clasificación de clientes</li>
-                    <li>Asesoría mensual presencial o virtual | Atención 24/7</li>
-                </ul>
-                <p class="plan-nota">IA como herramienta, Synkra como cerebro – personas como conexión.</p>
-                <div class="plan-botones">
-                    <a href="https://wa.me/573008836354" target="_blank" class="btn-plan">Obtener Plan Premium Synkra</a>
-                    <a href="#contacto" class="btn-masinfo">Más info</a>
-                </div>
+<!-- SECCIÓN NUESTROS PLANES CON PRECIOS EN COP -->
+<section class="planes" id="planes">
+    <h2>Nuestros Planes</h2>
+    <div class="planes-container">
+        <div class="plan-card">
+            <h3>PLAN EMPRENDEDOR</h3>
+            <div class="precio">$200.000 COP/mes</div>
+            <ul>
+                <li>Gestión de 1 red social</li>
+                <li>10 publicaciones al mes</li>
+                <li>Chat automatizado básico + apoyo humano ocasional</li>
+                <li>Reporte mensual preparado por equipo humano</li>
+                <li>Atención L-V 8:00 AM - 8:00 PM</li>
+            </ul>
+            <div class="plan-botones">
+                <a href="https://wa.me/573008836354" target="_blank" class="btn-plan">Obtener Plan Emprendedor</a>
+                <a href="#contacto" class="btn-masinfo">Más info</a>
             </div>
         </div>
-    </section>
+        <div class="plan-card">
+            <h3>PLAN BÁSICO</h3>
+            <div class="precio">$350.000 COP/mes</div>
+            <ul>
+                <li>Gestión de 2 redes sociales</li>
+                <li>20 publicaciones al mes</li>
+                <li>Chat automatizado completo + apoyo humano regular</li>
+                <li>Reporte semanal + mensual con análisis humano</li>
+                <li>Análisis de competidores</li>
+                <li>Atención L-V 8:00 AM - 8:00 PM | Sáb 9:00 AM - 1:00 PM</li>
+            </ul>
+            <div class="plan-botones">
+                <a href="https://wa.me/573008836354" target="_blank" class="btn-plan">Obtener Plan Básico</a>
+                <a href="#contacto" class="btn-masinfo">Más info</a>
+            </div>
+        </div>
+        <div class="plan-card destacado">
+            <h3>PLAN ESTÁNDAR PREMIUM</h3>
+            <div class="precio">$700.000 COP/mes</div>
+            <ul>
+                <li>✅ IA: Sugerencias de contenido, Análisis de datos</li>
+                <li>✅ Humano: Asesor asignado, atención personalizada</li>
+                <li>Gestión de 3 redes sociales</li>
+                <li>30 publicaciones al mes</li>
+                <li>Chat + atención humana exclusiva | Reportes detallados</li>
+                <li>Campañas de publicidad básicas | Diseño de contenido exclusivo</li>
+                <li>Atención 24/7</li>
+            </ul>
+            <div class="plan-botones">
+                <a href="https://wa.me/573008836354" target="_blank" class="btn-plan">Obtener Plan Estándar Premium</a>
+                <a href="#contacto" class="btn-masinfo">Más info</a>
+            </div>
+        </div>
+        <div class="plan-card">
+            <h3>PLAN PREMIUM EXCLUSIVO SYNKRA</h3>
+            <div class="precio">$1.200.000 COP/mes</div>
+            <ul>
+                <li>✅ IA: Optimización de procesos, Análisis de datos profundo, Dirigido por Synkra</li>
+                <li>✅ Equipo: Coordinador estratégico, diseñador, community manager y publicista</li>
+                <li>Gestión de 4 redes sociales | Contenido + Publicidad avanzada</li>
+                <li>Seguimiento integral + Clasificación de clientes</li>
+                <li>Asesoría mensual presencial o virtual | Atención 24/7</li>
+            </ul>
+            <p class="plan-nota">IA como herramienta, Synkra como cerebro – personas como conexión.</p>
+            <div class="plan-botones">
+                <a href="https://wa.me/573008836354" target="_blank" class="btn-plan">Obtener Plan Premium Synkra</a>
+                <a href="#contacto" class="btn-masinfo">Más info</a>
+            </div>
+        </div>
+    </div>
+</section>
 
-    <!-- Sección Dejanos Tu Contacto -->
-    <section class="contacto-formulario" id="contacto">
-        <h2>Dejanos Tu Contacto</h2>
-        <form class="formulario">
-            <div class="campo-formulario">
-                <label for="nombre">Nombre completo</label>
-                <input type="text" id="nombre" name="nombre" required>
-            </div>
-            <div class="campo-formulario">
-                <label for="telefono">Número de contacto</label>
-                <input type="tel" id="telefono" name="telefono" required>
-            </div>
-            <div class="campo-formulario">
-                <label for="correo">Correo (opcional)</label>
-                <input type="email" id="correo" name="correo">
-            </div>
-            <button type="submit" class="btn-enviar">Enviar mis datos</button>
-            <p class="formulario-nota">Tu información es manejada por nuestro equipo con total seguridad</p>
-        </form>
-    </section>
+<!-- SECCIÓN DEJANOS TU CONTACTO -->
+<section class="contacto-formulario" id="contacto">
+    <h2>Dejanos Tu Contacto</h2>
+    <form class="formulario">
+        <div class="campo-formulario">
+            <label for="nombre">Nombre completo</label>
+            <input type="text" id="nombre" name="nombre" required>
+        </div>
+        <div class="campo-formulario">
+            <label for="telefono">Número de contacto</label>
+            <input type="tel" id="telefono" name="telefono" required>
+        </div>
+        <div class="campo-formulario">
+            <label for="correo">Correo (opcional)</label>
+            <input type="email" id="correo" name="correo">
+        </div>
+        <button type="submit" class="btn-enviar">Enviar mis datos</button>
+        <p class="formulario-nota">Tu información es manejada por nuestro equipo con total seguridad</p>
+    </form>
+</section>
 
-    <!-- Sección Preguntas Frecuentes -->
-    <section class="preguntas-frecuentes">
-        <h2>Preguntas Frecuentes</h2>
-        <div class="preguntas-container">
-            <div class="pregunta">
-                <h3>¿Cuánto tiempo tarda en empezar a ver resultados?</h3>
-                <p>~30 días, ajustado por nuestro equipo según las características de tu negocio</p>
-            </div>
-            <div class="pregunta">
-                <h3>¿Puedo cambiar de plan en cualquier momento?</h3>
-                <p>Sí, sin costo adicional – nuestro equipo te ayudará en todo el proceso de transición</p>
-            </div>
-            <div class="pregunta">
-                <h3>¿Incluyen el registro de dominios o hosting?</h3>
-                <p>No, pero asesoramos personalmente para que elijas las opciones que mejor se adapten a tus necesidades</p>
-            </div>
-            <div class="pregunta">
-                <h3>¿Ofrecen garantías de resultados?</h3>
-                <p>Sí, si no se cumplen las metas acordadas, te regalamos un mes adicional de servicios sin costo</p>
-            </div>
+<!-- SECCIÓN PREGUNTAS FRECUENTES -->
+<section class="preguntas-frecuentes">
+    <h2>Preguntas Frecuentes</h2>
+    <div class="preguntas-container">
+        <div class="pregunta">
+            <h3>¿Cuánto tiempo tarda en empezar a ver resultados?</h3>
+            <p>~30 días, ajustado por nuestro equipo según las características de tu negocio</p>
         </div>
-    </section>
+        <div class="pregunta">
+            <h3>¿Puedo cambiar de plan en cualquier momento?</h3>
+            <p>Sí, sin costo adicional – nuestro equipo te ayudará en todo el proceso de transición</p>
+        </div>
+        <div class="pregunta">
+            <h3>¿Incluyen el registro de dominios o hosting?</h3>
+            <p>No, pero asesoramos personalmente para que elijas las opciones que mejor se adapten a tus necesidades</p>
+        </div>
+        <div class="pregunta">
+            <h3>¿Ofrecen garantías de resultados?</h3>
+            <p>Sí, si no se cumplen las metas acordadas, te regalamos un mes adicional de servicios sin costo</p>
+        </div>
+    </div>
+</section>
 
-    <!-- Sección Contacto y Redes -->
-    <section class="contacto-redes">
-        <h2>Contacto y Redes</h2>
-        <div class="contacto-info">
-            <p>WhatsApp: +57 300 883 6354 – Atención humana directa</p>
-            <p>Email: synkra2026@gmail.com – Respuesta en menos de 24 horas</p>
-            <p>Ubicación: Medellín, Antioquia - Colombia – Visítanos o agenda reunión virtual</p>
-            <p>Horarios: General L-V 8:00 AM - 8:00 PM | Sáb 9:00 AM - 1:00 PM; Premium 24/7</p>
-        </div>
-        <div class="redes-botones">
-            <a href="#" target="_blank" class="btn-red">Facebook</a>
-            <a href="#" target="_blank" class="btn-red">Instagram</a>
-        </div>
-    </section>
+<!-- SECCIÓN CONTACTO Y REDES -->
+<section class="contacto-redes">
+    <h2>Contacto y Redes</h2>
+    <div class="contacto-info">
+        <p>WhatsApp: +57 300 883 6354 – Atención humana directa</p>
+        <p>Email: synkra2026@gmail.com – Respuesta en menos de 24 horas</p>
+        <p>Ubicación: Medellín, Antioquia - Colombia – Visítanos o agenda reunión virtual</p>
+        <p>Horarios: General L-V 8:00 AM - 8:00 PM | Sáb 9:00 AM - 1:00 PM; Premium 24/7</p>
+    </div>
+    <div class="redes-botones">
+        <a href="#" target="_blank" class="btn-red">Facebook</a>
+        <a href="#" target="_blank" class="btn-red">Instagram</a>
+    </div>
+</section>
 
-    <!-- Pie de Página -->
-    <footer>
-        <div class="footer-redes">
-            <a href="#" target="_blank">Facebook</a>
-            <a href="#" target="_blank">Instagram</a>
-        </div>
-        <p class="copyright">© 2026 Synkra - Todos los derechos reservados – Conectando negocios con personas</p>
-    </footer>
+<!-- PIE DE PÁGINA -->
+<footer>
+    <div class="footer-redes">
+        <a href="#" target="_blank">Facebook</a>
+        <a href="#" target="_blank">Instagram</a>
+    </div>
+    <p class="copyright">© 2026 Synkra - Todos los derechos reservados – Conectando negocios con personas</p>
+</footer>
 </body>
 </html>
+
